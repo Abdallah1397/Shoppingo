@@ -1,0 +1,7 @@
+.navbar{
+    display: flex;
+}
+.navbar_items{
+    display: flex;
+    list-style: none;
+}
