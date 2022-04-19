@@ -1,7 +1,25 @@
-.navbar{
+.navbar {
     display: flex;
+    border-bottom: 1px solid #eaeaea;
+    padding: 10px 40px;
+    flex-grow: 1;
 }
-.navbar_items{
+
+.navbar_items {
+    flex-grow: 1;
+    padding-left: 100px;
+    font-family: monospace;
+    font-size: larger;
+}
+
+.navbar_items,
+.nav_icons {
     display: flex;
     list-style: none;
+    align-items: center;
+}
+
+.logo>h1 {
+    font-family: 'Lobster', cursive;
+    font-size: xx-large;
 }
