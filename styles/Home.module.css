@@ -1,6 +1,6 @@
 .mainBanner{
   background-image: url("../public/mainBanner.png");
-  height: 85vh;
+  height: 70vh;
   background-size: cover;
   background-position: center;
   object-fit: contain;
@@ -23,7 +23,7 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media  screen and (min-width: 992px) and (max-width: 1200px) {
   .mainBanner{
-    height: 85vh;
+    height: 70vh;
   }
   .title{
     margin-right: 40px;
