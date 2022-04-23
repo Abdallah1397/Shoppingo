@@ -1,4 +1,4 @@
-import styles from "../styles/title.module.css";
+import styles from "./title.module.css"
 const Title = ({ title }) => {
     return (
         <div className={styles.title}>
