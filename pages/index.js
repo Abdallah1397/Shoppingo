@@ -1,6 +1,8 @@
+import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Title from "../components/Title/Title";
-import Image from "next/image";
+import Product from "../components/product/product";
+
 export default function Home({ bags }) {
   return (
     <div>
@@ -17,16 +19,14 @@ export default function Home({ bags }) {
       <div className="container">
         {/* title */}
         <Title title="Products" />
-        {bags.map(item => {
-          return (
-            <div key={item.id}>
-              <h1>
-                {item.title}
-              </h1>
-              <Image alt={item.title} src={item.image} width="500px" height="400px" />
-            </div>
-          )
-        })}
+        {/* Products */}
+        <div className={styles.products}>
+          {bags.map((item) => {
+            return (
+              <Product title={item.title} src={item.image} key={item.id} price={item.price} />
+            );
+          })}
+        </div>
       </div>
     </div>
   );
@@ -43,7 +43,5 @@ export async function getStaticProps() {
     props: {
       bags,
     },
-  }
+  };
 }
-
-

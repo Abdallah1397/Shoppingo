@@ -19,6 +19,9 @@
   font-family: 'Lobster', cursive;
   font-size: 4.5rem;
 }
+/* .products{
+  display: flex;
+} */
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media  screen and (min-width: 992px) and (max-width: 1200px) {
