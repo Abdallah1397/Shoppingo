@@ -21,9 +21,9 @@ export default function Home({ bags }) {
         <Title title="Products" />
         {/* Products */}
         <div className={styles.products}>
-          {bags.map((item) => {
+          {bags.map((item, index) => {
             return (
-              <Product title={item.title} src={item.image} key={item.id} price={item.price} />
+              <Product key={index} title={item.title} src={item.image} id={item.id} price={item.price} />
             );
           })}
         </div>

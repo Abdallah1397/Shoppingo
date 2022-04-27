@@ -1,0 +1,13 @@
+                /* Product Details */
+/* *********************************************** */
+.productDetails{
+    display: flex;
+    margin: 0 3rem;
+}
+.productDetails div{
+    width: 50%;
+}
+.imageDiv{
+    border: 1px solid #eaeaea;
+    width: 100%;
+}

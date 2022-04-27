@@ -6,9 +6,9 @@
     border: 1px solid #eaeaea;
 }
 /* Bag Image */
-.product img:hover{
-    transform: scale(1.3);
-    transition: 1s;
+.product:hover img{
+        transform: scale(1.3);
+        transition: 1s;
 }
 /* Bag Title */
 .informations h3 {
@@ -34,6 +34,28 @@
 .informations div h4{
     font-family: 'Lobster', cursive;
     margin-top: -5px;
+}
+/* Details Part */
+.details{
+    display: flex;
+    justify-content: center;
+    padding-bottom:10px;
+}
+.details a{
+    display: flex;
+    justify-content: center;
+    font-family: 'Lobster', cursive;
+    font-size: smaller;
+    color: #eaeaea;
+    background: #000;
+    border: 3px solid #000;
+    padding: 10px;
+    width: 70%;
+}
+.details a:hover{
+    transition: 2s;
+    background: #fff;
+    color: #000;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
