@@ -21,6 +21,27 @@
   font-family: 'Lobster', cursive;
   font-size: 4.5rem;
 }
+/* pagination */
+.pagination{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.pagination li a{
+  border: 1px solid #eaeaea;
+  padding: 15px;
+  display: inline-block;
+  cursor: pointer;
+}
+.disabledPage{
+  opacity: 0.3;
+}
+.activePage{
+  color: #fff;
+  background-color: #000;
+}
 /* .products{
   display: flex;
 } */

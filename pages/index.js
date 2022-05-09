@@ -5,6 +5,19 @@ import Title from "../components/Title/Title";
 import Product from "../components/product/product";
 
 export default function Home({ bags }) {
+  // pagination state
+  const [currentPage, setCurrentPage] = useState(0);
+  // products per page
+  const productPerPage = 3;
+  const offset = currentPage * productPerPage;
+  // get selected data
+  const currentPageData = bags.slice(offset, offset + productPerPage);
+  // get page count
+  const pageCount = Math.ceil(bags.length / productPerPage);
+  // page change function
+  const handlePageChange = ({ selected }) => {
+    setCurrentPage(selected);
+  };
   return (
     <div>
       {/* Main Banner */}
@@ -22,11 +35,31 @@ export default function Home({ bags }) {
         <Title title="Products" />
         {/* Products */}
         <div className={styles.products}>
-          {bags.map((item, index) => {
+          {currentPageData.map((item, index) => {
             return (
-              <Product key={index} title={item.title} src={item.image} id={item.id} price={item.price} />
+              <Product
+                key={index}
+                title={item.title}
+                src={item.image}
+                id={item.id}
+                price={item.price}
+              />
             );
           })}
+        </div>
+        <div>
+          {/* Pagination */}
+          <ReactPaginate
+            previousLabel={"← Previous"}
+            nextLabel={"Next →"}
+            pageCount={pageCount}
+            onPageChange={handlePageChange}
+            containerClassName={styles.pagination}
+            previousLinkClassName={"perviousPage"}
+            nextLinkClassName={"nextPage"}
+            disabledClassName={styles.disabledPage}
+            activeClassName={styles.activePage}
+          />
         </div>
       </div>
     </div>
