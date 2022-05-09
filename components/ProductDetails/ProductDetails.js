@@ -4,15 +4,41 @@ import styles from "./ProductDetails.module.css";
 const ProductDetails = (props) => {
     return (
         <div className={styles.productDetails}>
-            {/* Image & Details */}
-            <div>
+            {/* Image */}
+            <div className={styles.productDiv}>
                 <div className={styles.imageDiv}>
-                    <Image layout="responsive" width="10" height="10" sizes="100vw" alt={props.title} src={props.image} />
+                    <Image
+                        className={styles.image}
+                        alt={props.title}
+                        src={props.image}
+                        width="10"
+                        height="10"
+                        layout="responsive"
+                    />
                 </div>
-                <h5>{props.title}</h5>
             </div>
-
+            {/* Details */}
+            <div className={styles.details}>
+                <h4>{props.title} Tote</h4>
+                <p>{props.desc}</p>
+                <span>{props.price}</span>
+                <span>Quantity</span>
+                <input
+                    type="number"
+                    pattern="[0-9]*"
+                    aria-label="Quantity"
+                    max="99"
+                    min="1"
+                    defaultValue="1"
+                />
+                {/* cart button */}
+                <div>
+                    <button className={styles.addToCartBtn}>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
         </div>
-    )
-}
+    );
+};
 export default ProductDetails;

@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { useState } from "react";
+import ReactPaginate from "react-paginate";
 import styles from "../styles/Home.module.css";
 import Title from "../components/Title/Title";
 import Product from "../components/product/product";

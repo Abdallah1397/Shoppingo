@@ -1,13 +1,114 @@
-                /* Product Details */
+/* Product Details */
 /* *********************************************** */
-.productDetails{
+.productDetails {
     display: flex;
-    margin: 0 3rem;
+    margin: 3% 8%;
 }
-.productDetails div{
+.productDiv {
     width: 50%;
 }
-.imageDiv{
+.imageDiv {
     border: 1px solid #eaeaea;
-    width: 100%;
+    width: 70%;
+    margin: 0 15%;
+}
+
+.details {
+    width: 50%;
+    font-family: 'Lobster', cursive;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+}
+
+.details span {
+    font-size: medium;
+    display: block;
+    margin-top: 20px;
+}
+
+.details input {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #eaeaea;
+    font-size: small;
+    font-family: 'Lobster', cursive;
+}
+
+.details p {
+    font-size: medium;
+    width: 60%;
+    text-align: justify;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.addToCartBtn {
+    background-color: black;
+    color: #fff;
+    width: 60%;
+    margin-top: 1rem;
+    padding: .5rem;
+    font-family: 'Lobster';
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media  screen and (min-width: 768px) and (max-width: 992px){
+    .productDiv {
+        width: 50%;
+    }
+    .imageDiv {
+        width: 90%;
+        margin: 5%;
+    }
+    .details {
+        width: 50%;
+        font-size: 2rem;
+    }
+    .details p {
+        font-size: large;
+        width: 100%;
+    }
+    .details input {
+        padding: 10px;
+        font-size: large;
+        width: 100px;
+    }
+    .addToCartBtn {
+        width: 100%;
+        margin-top: 1rem;
+        padding: .5rem;
+        font-family: 'Lobster';
+        font-size: large;
+    }
+}
+/* Extra small devices (phones, 768px and down) */
+@media  screen and (max-width: 768px) {
+    .productDetails {
+        display: block;
+    }
+    .productDiv {
+        width: 100%;
+    }
+    .imageDiv {
+        width: 90%;
+        margin: 5%;
+    }
+    .details {
+        width: 100%;
+        font-size: 2rem;
+    }
+    .details p {
+        font-size: large;
+        width: 100%;
+    }
+    .details input {
+        padding: 10px;
+        font-size: large;
+        width: 100px;
+    }
+    .addToCartBtn {
+        width: 100%;
+        margin-top: 1rem;
+        padding: .5rem;
+        font-family: 'Lobster';
+        font-size: large;
+    }
 }

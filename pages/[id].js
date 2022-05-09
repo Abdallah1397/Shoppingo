@@ -2,7 +2,7 @@ import ProductDetails from "../components/ProductDetails/ProductDetails";
 const SingleProduct = (props) => {
     return (
         <div>
-            <ProductDetails image={props.bag.image} title={props.bag.title} />
+            <ProductDetails image={props.bag.image} title={props.bag.title} price={props.bag.price} desc={props.bag.desc} />
         </div>
     );
 };
