@@ -1,14 +1,17 @@
 import { useState } from "react";
+import Image from "next/image";
 import ReactPaginate from "react-paginate";
 import styles from "../styles/Home.module.css";
 import Title from "../components/Title/Title";
+import About from "../components/About/About";
 import Product from "../components/product/product";
+import Shoppingo from "../public/assets/banners/shoppingo.png";
 
 export default function Home({ bags }) {
   // pagination state
   const [currentPage, setCurrentPage] = useState(0);
   // products per page
-  const productPerPage = 3;
+  const productPerPage = 8;
   const offset = currentPage * productPerPage;
   // get selected data
   const currentPageData = bags.slice(offset, offset + productPerPage);
@@ -30,6 +33,9 @@ export default function Home({ bags }) {
           </h1>
         </div>
       </div>
+      {/* <div>
+        <Image layout="fill" src={Shoppingo} alt="Shoppingo Banner" objectFit="contain" />
+      </div> */}
       <div className="container">
         {/* title */}
         <Title title="Products" />
@@ -47,7 +53,7 @@ export default function Home({ bags }) {
             );
           })}
         </div>
-        <div>
+        <div className={styles.paginationDiv}>
           {/* Pagination */}
           <ReactPaginate
             previousLabel={"← Previous"}
@@ -62,6 +68,7 @@ export default function Home({ bags }) {
           />
         </div>
       </div>
+      <About />
     </div>
   );
 }
