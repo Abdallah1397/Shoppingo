@@ -25,13 +25,13 @@ export default function Home({ bags }) {
     <div>
       {/* Main Banner */}
       <div className={styles.mainBanner}>
-        <div className={styles.title}>
+        {/* <div className={styles.title}>
           <h1>
             Shoppingo
             <br />
             Funky Printed Bags
           </h1>
-        </div>
+        </div> */}
       </div>
       {/* <div>
         <Image layout="fill" src={Shoppingo} alt="Shoppingo Banner" objectFit="contain" />

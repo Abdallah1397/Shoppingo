@@ -1,8 +1,8 @@
                 /* Home Page */
 /* *********************************************** */
 .mainBanner{
-  background-image: url("../public/assets/banners/mainBanner.png");
-  height: 70vh;
+  background-image: url("../public/assets/banners/girlBanner.jpg");
+  height: 90vh;
   background-size: cover;
   background-position: center;
   object-fit: contain;
