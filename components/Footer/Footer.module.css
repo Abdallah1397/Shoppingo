@@ -1,16 +1,58 @@
 .footer {
     background-color: #000;
-    color: aliceblue;
+    color: #fff;
     padding: 5px;
     text-align: center;
+
 }
-.footer h2{
+
+/* Logo */
+.footer h2 {
     font-family: 'Lobster', cursive;
-    font-size: xx-large;
+    font-size: 2.9rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding: 1rem 0;
 }
+.subscribeHeader h5{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding: 1rem 0;
+}
+.subscribeHeader p{
+    font-size: 0.8rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+/* Subscribe */
+.subscribe{
+    padding-top: .7rem;
+}
+.subscribe input {
+    padding: 10px;
+    width: 30%;
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.subscribe button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 2px;
+    background-color:#969393 ;
+    color: #fff;
+    background-color: rgb(150, 113, 1);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.subscribe button:hover {
+    transition: 1s;
+}
+/* Footer Information contains Instructions & Contact & Social Media */
 .footerInformatians {
     display: flex;
-    padding: 2rem 0 4rem 0;
+    padding: 3.5rem 0 5rem 0;
     width: 80%;
     margin: 0 10%;
 }
@@ -20,10 +62,14 @@
     text-align: center;
 }
 
+/* Section Title */
 .footer h4 {
     line-height: 2em;
+    letter-spacing: 2px;
+
 }
 
+/* Section subtitle */
 .footer p {
     line-height: 1.5em;
 }
@@ -34,26 +80,52 @@
     margin-block-end: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.socialMediaIcons{
-    padding: 0.5rem;
-    text-align: center;
+
+/* Social Media Icon Div */
+.socialMediaIcons {
+    display: flex;
+    justify-content: center;
 }
-.insta{
+
+/* Links */
+.insta,
+.facebook,
+.pinterest {
     border: 1px solid #fff;
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
     margin: 0.2rem;
-    padding: .5rem;
+    /* padding: 0.5rem; */
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.insta:hover{
+    background-color:#ea1164 ;
+    transition: 1s;
+}
+.facebook:hover{
+    background-color:#3B5998 ;
+    transition: 1s;
+}
+.pinterest:hover{
+    background-color:#cb2027 ;
+    transition: 1s;
+}
+
 /* Extra small devices (phones, 768px and down) */
 @media screen and (max-width: 768px) {
+    .subscribe input {
+        width: 50%;
+    }
     .footerInformatians {
         display: block;
         padding: 2rem 0;
         width: 80%;
         margin: 0 10%;
     }
+
     .footerInformatians div {
         width: 100%;
         text-align: center;

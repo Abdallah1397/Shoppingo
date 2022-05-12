@@ -4,6 +4,24 @@ import styles from "./Footer.module.css";
 const Footer = () => {
     return (
         <div className={styles.footer}>
+            {/* Footer-Logo */}
+            <div>
+                <h2>Shoppingo</h2>
+            </div>
+            {/* Subscribe Header */}
+            <div className={styles.subscribeHeader}>
+                <h5>
+                    Subscribe to our newsletter
+                </h5>
+                <p>
+                    Get all the latest information on Events, Sales and Offers.
+                </p>
+            </div>
+            {/* Subscribe */}
+            <div className={styles.subscribe}>
+                <input type="email" placeholder="Enter your mail" />
+                <button>Subscribe</button>
+            </div>
             <div className={styles.footerInformatians}>
                 {/* Instructions */}
                 <div>
@@ -25,20 +43,15 @@ const Footer = () => {
                     <p>Pinterest</p>
                 </div>
             </div>
-            <div>
-                <h2>
-                    Shoppingo
-                </h2>
-            </div>
             {/* Social Media Icons */}
             <div className={styles.socialMediaIcons}>
                 <a href="#" className={styles.insta}>
                     <i className="fa fa-instagram" />
                 </a>
-                <a href="#" className={styles.insta}>
+                <a href="#" className={styles.facebook}>
                     <i className="fa fa-facebook" />
                 </a>
-                <a href="#" className={styles.insta}>
+                <a href="#" className={styles.pinterest}>
                     <i className="fa fa-pinterest" />
                 </a>
             </div>
