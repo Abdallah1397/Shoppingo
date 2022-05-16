@@ -1,32 +1,67 @@
-                /* Navbar */
-/* *********************************************** */
+/***************************************************/
+/*                       Navbar                    */
+/***************************************************/
+/* main nav */
 .navbar {
     display: flex;
-    border-bottom: 1px solid #eaeaea;
-    padding: 1px 0;
-    flex-grow: 1;
     position: sticky;
     z-index: 111;
-    top:0;
+    top: 0;
     left: 0;
     background: #fff;
+    border-bottom: 1px solid #eaeaea;
+    overflow: hidden;
+
+}
+/* Logo */
+.logo {
+    padding: 0 20px;
+    flex-grow: 3;
 }
 
+.logo h1 {
+    font-family: 'Lobster', cursive;
+    font-size: xx-large;
+    
+}
+/* Items */
 .navbar_items {
-    flex-grow: 1;
-    font-family: monospace;
-    font-size: larger;
-}
-
-.navbar_items,
-.nav_icons {
     display: flex;
     list-style: none;
     align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    font-family: Hack, monospace;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.navbar_items li {
+    padding: 1rem;
 }
 
-.logo>h1 {
-    font-family: 'Lobster', cursive;
-    font-size: xx-large;
-    padding:0 20px;
+/* Navbar Icons */
+.nav_icons{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    width: max-content;
+    padding: 0 .5rem;
+
+}
+.icon{
+    font-size: 1.4rem;
+    padding: 0 .5rem;
+}
+.icon:nth-child(2){
+    display: none;
+}
+  /* Extra small devices (phones, 768px and down) */
+  @media  screen and (max-width: 768px) {
+    .icon:nth-child(2){
+        display: block;
+    }
+    .navbar_items {
+        display: none;
+    }
 }

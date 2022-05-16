@@ -70,7 +70,7 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media  screen and (min-width: 768px) and (max-width: 992px){
   .mainBanner{
-    height: 60vh;
+    height: 40vh;
   }
   .title{
     margin-right: 20px;
@@ -82,7 +82,7 @@
 /* Extra small devices (phones, 768px and down) */
 @media  screen and (max-width: 768px) {
   .mainBanner{
-    height: 40vh;
+    height: 30vh;
   }
   .title{
     margin-right: 20px;
