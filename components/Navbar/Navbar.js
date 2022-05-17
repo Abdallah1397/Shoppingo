@@ -1,9 +1,15 @@
+import { useState } from "react";
 import Link from "next/link";
-import OverlayNav from "../OverlayNav/OverLayNav";
 import styles from "./Navbar.module.css";
+import OverlayNav from "../OverlayNav/OverLayNav";
 
 // NavbarComponent
 const Navbar = () => {
+    // toggleFunction
+    const openNavigationBar = () => {
+        document.getElementById("myNav").style.width = "100%";
+    };
+
     return (
         <>
             <nav className={styles.navbar}>
@@ -31,11 +37,11 @@ const Navbar = () => {
                         <i className="fa fa-shopping-cart" aria-hidden="true"></i>
                     </li>
                     <li className={styles.icon}>
-                        <i className="fa fa-bars"></i>
+                        <i className="fa fa-bars" onClick={openNavigationBar}></i>
                     </li>
                 </ul>
+                <OverlayNav />
             </nav>
-            {/* <OverlayNav /> */}
         </>
     );
 };

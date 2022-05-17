@@ -11,7 +11,7 @@ export default function Home({ bags }) {
   // pagination state
   const [currentPage, setCurrentPage] = useState(0);
   // products per page
-  const productPerPage = 8;
+  const productPerPage = 4;
   const offset = currentPage * productPerPage;
   // get selected data
   const currentPageData = bags.slice(offset, offset + productPerPage);
@@ -24,18 +24,7 @@ export default function Home({ bags }) {
   return (
     <div>
       {/* Main Banner */}
-      <div className={styles.mainBanner}>
-        {/* <div className={styles.title}>
-          <h1>
-            Shoppingo
-            <br />
-            Funky Printed Bags
-          </h1>
-        </div> */}
-      </div>
-      {/* <div>
-        <Image layout="fill" src={Shoppingo} alt="Shoppingo Banner" objectFit="contain" />
-      </div> */}
+      <div className={styles.mainBanner} />
       <div className="container">
         {/* title */}
         <Title title="Products" />
@@ -56,13 +45,11 @@ export default function Home({ bags }) {
         <div className={styles.paginationDiv}>
           {/* Pagination */}
           <ReactPaginate
-            previousLabel={"← Previous"}
-            nextLabel={"Next →"}
             pageCount={pageCount}
             onPageChange={handlePageChange}
             containerClassName={styles.pagination}
-            previousLinkClassName={"perviousPage"}
-            nextLinkClassName={"nextPage"}
+            previousLinkClassName={styles.perviousPage}
+            nextLinkClassName={styles.nextPage}
             disabledClassName={styles.disabledPage}
             activeClassName={styles.activePage}
           />

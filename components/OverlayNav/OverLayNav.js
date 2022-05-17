@@ -1,31 +1,36 @@
+import { useState } from "react";
 import Link from "next/link";
 import styles from "./OverlayNav.module.css";
 
 // Navigation compontent that appears in responsive view
 const OverlayNav = () => {
+    // close navigiton bar 
+    const closeNavigationBar = () => {
+        document.getElementById("myNav").style.width = "0";
+    }
     return (
-        <div className={styles.navigation}>
+        <div className={styles.navigation} id="myNav">
             {/* Close Icon */}
             <div className={styles.closeIcon}>
-                <i className="fa fa-times" aria-hidden="true"></i>
+                <i className="fa fa-times" aria-hidden="true" onClick={closeNavigationBar}></i>
             </div>
             {/* items */}
             <div className={styles.items}>
-                <h3>
+                <h3 onClick={closeNavigationBar}>
                     <Link href="/">Shop</Link>
                 </h3>
-                <h3>
+                <h3 onClick={closeNavigationBar}>
                     <Link href="#">About</Link>
                 </h3>
-                <h3>
-                    <Link href="#">Contact</Link>
-                </h3>
+                <div>
+                    <h3 onClick={closeNavigationBar} >
+                        <Link href="#">Contact</Link>
+                    </h3>
+                </div>
             </div>
             {/* Logo */}
             <div className={styles.logo}>
-                <h1>
-                    Shoppingo
-                </h1>
+                <h1>Shoppingo</h1>
             </div>
         </div>
     );

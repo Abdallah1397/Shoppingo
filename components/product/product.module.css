@@ -5,10 +5,12 @@
     float: left;
     border: 1px solid #eaeaea;
 }
-.product:hover img{
-        transform: scale(1.3);
-        transition: 1s;
+
+.product:hover img {
+    transform: scale(1.3);
+    transition: 1s;
 }
+
 /* Bag Title */
 .informations h3 {
     text-transform: capitalize;
@@ -17,31 +19,36 @@
     justify-content: center;
     margin-top: -5px;
 }
+
 /* line & price */
-.informations div{
+.informations div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 /* line */
-.informations div span{
+.informations div span {
     width: 50px;
     height: 2px;
     background: #000;
     margin-top: -25px;
 }
+
 /* price */
-.informations div h4{
+.informations div h4 {
     font-family: 'Lobster', cursive;
     margin-top: -5px;
 }
+
 /* Details Part */
-.details{
+.details {
     display: flex;
     justify-content: center;
-    padding-bottom:10px;
+    padding-bottom: 1rem;
 }
-.details a{
+
+.details a {
     display: flex;
     justify-content: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -52,7 +59,8 @@
     padding: 10px;
     width: 70%;
 }
-.details a:hover{
+
+.details a:hover {
     transition: 2s;
     background: #fff;
     color: #000;
@@ -69,7 +77,12 @@
 /* Extra small devices (phones, 768px and down) */
 @media screen and (max-width: 768px) {
     .product {
-        margin: 2% 2%;
+        margin: 1rem 2%;
         width: 96%;
+    }
+
+    /* Bag Title */
+    .informations h3 {
+        margin-top: 0px;
     }
 }
