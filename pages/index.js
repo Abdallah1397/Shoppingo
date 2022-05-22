@@ -27,7 +27,7 @@ export default function Home({ bags }) {
       <div className={styles.mainBanner} />
       <div className="container">
         {/* title */}
-        <Title title="Products" />
+        <Title title="Products" id="shop" />
         {/* Products */}
         <div className={styles.products}>
           {currentPageData.map((item, index) => {

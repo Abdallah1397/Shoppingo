@@ -2,16 +2,24 @@ import ProductDetails from "../components/ProductDetails/ProductDetails";
 const SingleProduct = (props) => {
     return (
         <div>
-            <ProductDetails image={props.bag.image} title={props.bag.title} price={props.bag.price} desc={props.bag.desc} />
+            <ProductDetails
+                image={props.bag.image}
+                title={props.bag.title}
+                price={props.bag.price}
+                desc={props.bag.desc}
+            />
         </div>
     );
 };
 export default SingleProduct;
 
-// Get Product Details by getStaticPaths Function but we should use getStaticProps
+// Get Product Details by getStaticPaths to give getStaticProps avalibilty to get paths
+// Next.js will statically pre-render all the paths specified by getStaticPaths
 export async function getStaticPaths() {
+    // get all data
     const res = await fetch("http://127.0.0.1:3000/api/bags");
     const bags = await res.json();
+    // getPaths
     const paths = bags.map((item) => {
         return {
             params: { id: `${item.id}` },
@@ -19,9 +27,10 @@ export async function getStaticPaths() {
     });
     return {
         paths: paths,
-        fallback: false,
+        fallback: false, // any paths not returned by getStaticPaths will result in a 404 page
     };
 }
+// getStaticProps with context as a props, context contains params.id from url "dynamic id" 
 export async function getStaticProps(context) {
     const res = await fetch(
         `http://127.0.0.1:3000/api/bags/${context.params.id}`

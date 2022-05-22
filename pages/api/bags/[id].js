@@ -2,7 +2,7 @@ import { bags } from "../../../data/bags";
 
 // handler function to get one bag
 export default function bagHandler(req, res) {
-    // get id     
+    // get id from query of request
     let id = req.query.id;
     // find item based on id params
     let bag = bags.find(item => item.id === id);

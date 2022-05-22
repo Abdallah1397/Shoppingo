@@ -1,7 +1,7 @@
 import styles from "./title.module.css"
-const Title = ({ title }) => {
+const Title = ({ title, id }) => {
     return (
-        <div className={styles.title}>
+        <div className={styles.title} id={id}>
             <div />
             <h1>{title}</h1>
             <div />

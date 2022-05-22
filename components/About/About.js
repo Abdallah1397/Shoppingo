@@ -4,7 +4,7 @@ import Title from "../Title/Title";
 const About = () => {
     return (
         <div className={styles.about}>
-            <Title title="About" />
+            <Title title="About" id="about" />
             <p>
                 A tote bag is a large and often unfastened bag with parallel handles
                 that emerge from the sides of its pouch. Totes are often used as

@@ -37,7 +37,10 @@
     text-transform: uppercase;
 }
 .navbar_items li {
-    padding: 1rem;
+    padding: .5rem 1rem;
+}
+.navbar_items li a{
+    cursor: pointer;
 }
 
 /* Navbar Icons */

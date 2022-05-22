@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import { Link as LinkScroll, animateScroll } from "react-scroll";
 import styles from "./Navbar.module.css";
 import OverlayNav from "../OverlayNav/OverLayNav";
 
@@ -24,8 +25,28 @@ const Navbar = () => {
                     <li>
                         <Link href="/">Shop</Link>
                     </li>
+                    {/* <li>
+                        <LinkScroll
+                            to="shop"
+                            smooth={true}
+                            offset={-90}
+                            duration={1000}
+                            spy={true}
+                            href="/"
+                        >
+                            Shop
+                        </LinkScroll>
+                    </li> */}
                     <li>
-                        <Link href="#">About</Link>
+                        <LinkScroll
+                            to="about"
+                            smooth={true}
+                            offset={-95}
+                            duration={1000}
+                            spy={true}
+                        >
+                            About
+                        </LinkScroll>
                     </li>
                     <li>
                         <Link href="#">Contact</Link>
