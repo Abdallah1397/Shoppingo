@@ -33,7 +33,7 @@ const ProductDetails = (props) => {
                 />
                 {/* cart button */}
                 <div>
-                    <button className={styles.addToCartBtn}>
+                    <button className={styles.addToCartBtn} onClick={props.onClick}>
                         Add to Cart
                     </button>
                 </div>

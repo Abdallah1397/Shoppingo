@@ -1,5 +1,8 @@
+import { useDispatch } from "react-redux";
 import ProductDetails from "../components/ProductDetails/ProductDetails";
+import { addProduct } from "../redux/actions/cart";
 const SingleProduct = (props) => {
+    const dispatch = useDispatch();
     return (
         <div>
             <ProductDetails
@@ -7,6 +10,7 @@ const SingleProduct = (props) => {
                 title={props.bag.title}
                 price={props.bag.price}
                 desc={props.bag.desc}
+                onClick={() => dispatch(addProduct(props.bag))}
             />
         </div>
     );

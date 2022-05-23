@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import Link from "next/link";
 import { Link as LinkScroll, animateScroll } from "react-scroll";
 import styles from "./Navbar.module.css";
@@ -6,6 +7,8 @@ import OverlayNav from "../OverlayNav/OverLayNav";
 
 // NavbarComponent
 const Navbar = () => {
+    // QTY 
+    const qty = useSelector(state => state.cart.totalQty);
     // toggleFunction
     const openNavigationBar = () => {
         document.getElementById("myNav").style.width = "100%";
@@ -18,6 +21,7 @@ const Navbar = () => {
                 <div className={styles.logo}>
                     <h1>
                         <Link href="/">Shoppingo</Link>
+                        {qty}
                     </h1>
                 </div>
                 {/* Items */}

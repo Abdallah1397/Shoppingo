@@ -1,11 +1,9 @@
 import { useState } from "react";
-import Image from "next/image";
 import ReactPaginate from "react-paginate";
 import styles from "../styles/Home.module.css";
 import Title from "../components/Title/Title";
 import About from "../components/About/About";
 import Product from "../components/product/product";
-import Shoppingo from "../public/assets/banners/shoppingo.png";
 
 export default function Home({ bags }) {
   // pagination state
