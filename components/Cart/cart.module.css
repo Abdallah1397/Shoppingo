@@ -1,0 +1,11 @@
+.cartView{
+    z-index: 111;
+    height: 100%;
+    position: fixed;
+    top: 94px;
+    right: 0;
+    background-color: #fff;
+    border-left: 1px solid #eaeaea;
+    overflow: hidden;
+    width: 50vw;
+}

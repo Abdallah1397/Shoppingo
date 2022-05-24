@@ -4,10 +4,11 @@ import Link from "next/link";
 import { Link as LinkScroll, animateScroll } from "react-scroll";
 import styles from "./Navbar.module.css";
 import OverlayNav from "../OverlayNav/OverLayNav";
+import Cart from "../Cart/Cart";
 
 // NavbarComponent
 const Navbar = () => {
-    // QTY 
+    // number of items in cart
     const qty = useSelector(state => state.cart.totalQty);
     // toggleFunction
     const openNavigationBar = () => {
@@ -21,7 +22,6 @@ const Navbar = () => {
                 <div className={styles.logo}>
                     <h1>
                         <Link href="/">Shoppingo</Link>
-                        {qty}
                     </h1>
                 </div>
                 {/* Items */}
@@ -29,18 +29,6 @@ const Navbar = () => {
                     <li>
                         <Link href="/">Shop</Link>
                     </li>
-                    {/* <li>
-                        <LinkScroll
-                            to="shop"
-                            smooth={true}
-                            offset={-90}
-                            duration={1000}
-                            spy={true}
-                            href="/"
-                        >
-                            Shop
-                        </LinkScroll>
-                    </li> */}
                     <li>
                         <LinkScroll
                             to="about"
@@ -60,6 +48,7 @@ const Navbar = () => {
                 <ul className={styles.nav_icons}>
                     <li className={styles.icon}>
                         <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <span className={styles.spanNumber}>{qty}</span>
                     </li>
                     <li className={styles.icon}>
                         <i className="fa fa-bars" onClick={openNavigationBar}></i>
@@ -67,6 +56,8 @@ const Navbar = () => {
                 </ul>
                 <OverlayNav />
             </nav>
+            {/* <Cart /> */}
+
         </>
     );
 };

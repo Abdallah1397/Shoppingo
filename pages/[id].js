@@ -1,8 +1,18 @@
+import { useState } from 'react';
 import { useDispatch } from "react-redux";
 import ProductDetails from "../components/ProductDetails/ProductDetails";
 import { addProduct } from "../redux/actions/cart";
+
+
+// Product Details Page
 const SingleProduct = (props) => {
     const dispatch = useDispatch();
+    // state to get the qty number
+    const [qtyNum, setQtyNum] = useState(1);
+    // qty change function
+    const onQtyChange = (e) => {
+        setQtyNum(parseInt(e.target.value));
+    }
     return (
         <div>
             <ProductDetails
@@ -10,7 +20,8 @@ const SingleProduct = (props) => {
                 title={props.bag.title}
                 price={props.bag.price}
                 desc={props.bag.desc}
-                onClick={() => dispatch(addProduct(props.bag))}
+                onChange={onQtyChange}
+                onClick={() => dispatch(addProduct(props.bag, qtyNum))}
             />
         </div>
     );

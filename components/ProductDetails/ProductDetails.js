@@ -27,9 +27,10 @@ const ProductDetails = (props) => {
                     type="number"
                     pattern="[0-9]*"
                     aria-label="Quantity"
-                    max="99"
+                    max="10"
                     min="1"
                     defaultValue="1"
+                    onChange={props.onChange}
                 />
                 {/* cart button */}
                 <div>

@@ -50,14 +50,30 @@
     align-items: center;
     width: max-content;
     padding: 0 .5rem;
-
 }
 .icon{
     font-size: 1.4rem;
     padding: 0 .5rem;
 }
+.icon:nth-child(1){
+    position: relative;
+}
 .icon:nth-child(2){
     display: none;
+}
+.spanNumber{
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    font-size: .6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    top: -2px;
+    right: 3px;
+    background-color:#00438a;
+    color: #fff;
 }
   /* Extra small devices (phones, 768px and down) */
   @media  screen and (max-width: 768px) {
