@@ -57,6 +57,7 @@
 }
 .icon:nth-child(1){
     position: relative;
+    cursor: pointer;
 }
 .icon:nth-child(2){
     display: none;
@@ -79,6 +80,7 @@
   @media  screen and (max-width: 768px) {
     .icon:nth-child(2){
         display: block;
+        cursor: pointer;
     }
     .navbar_items {
         display: none;

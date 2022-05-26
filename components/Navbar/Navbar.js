@@ -1,19 +1,24 @@
-import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import Link from "next/link";
 import { Link as LinkScroll, animateScroll } from "react-scroll";
+import Link from "next/link";
+import { toggleCart } from "../../redux/actions/cartStatus";
 import styles from "./Navbar.module.css";
 import OverlayNav from "../OverlayNav/OverLayNav";
 import Cart from "../Cart/Cart";
 
 // NavbarComponent
 const Navbar = () => {
+    const dispatch = useDispatch();
     // number of items in cart
     const qty = useSelector(state => state.cart.totalQty);
     // toggleFunction
     const openNavigationBar = () => {
         document.getElementById("myNav").style.width = "100%";
     };
+    // toggleCartFunction
+    const toggleCartFunction = () => {
+        dispatch(toggleCart());
+    }
 
     return (
         <>
@@ -47,7 +52,7 @@ const Navbar = () => {
                 {/* Icons */}
                 <ul className={styles.nav_icons}>
                     <li className={styles.icon}>
-                        <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <i className="fa fa-shopping-cart" aria-hidden="true" onClick={toggleCartFunction}></i>
                         <span className={styles.spanNumber}>{qty}</span>
                     </li>
                     <li className={styles.icon}>
@@ -56,8 +61,7 @@ const Navbar = () => {
                 </ul>
                 <OverlayNav />
             </nav>
-            {/* <Cart /> */}
-
+            <Cart />
         </>
     );
 };

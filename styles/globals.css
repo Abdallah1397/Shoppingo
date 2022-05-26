@@ -2,8 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  scroll-behavior: smooth;
-  scrollbar-color: #000;
+  font-family: 'Poppins', sans-serif;
 }
 
 a {
@@ -13,6 +12,7 @@ a {
 
 * {
   box-sizing: border-box;
+
 }
 .container{
   margin: 0 3rem;

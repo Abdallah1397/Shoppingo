@@ -18,6 +18,7 @@
     font-size: 2.5rem;
     padding: 1rem;
     text-align: end;
+    cursor: pointer;
 }
 
 .items{
