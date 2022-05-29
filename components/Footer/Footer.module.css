@@ -34,7 +34,6 @@
     padding: 10px;
     width: 30%;
     border: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .subscribe button {
     padding: 10px;
@@ -44,7 +43,6 @@
     background-color:#969393 ;
     color: #fff;
     background-color: rgb(150, 113, 1);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .subscribe button:hover {
     transition: 1s;
@@ -78,7 +76,6 @@
 .footer p {
     margin-block-start: 0;
     margin-block-end: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* Social Media Icon Div */

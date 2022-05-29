@@ -12,6 +12,8 @@ const Document = () => {
                     href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
                     rel="stylesheet"
                 />
+                <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
                 {/* Icons */}
                 <link
                     rel="stylesheet"
