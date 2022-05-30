@@ -1,4 +1,4 @@
-import { ADD_PRODUCT } from "../types/cart";
+import { ADD_PRODUCT, REMOVE_PRODUCT } from "../types/cart";
 
 const INITIAL_STATE = {
     totalQty: 0,
@@ -26,6 +26,15 @@ const CartReducer = (state = INITIAL_STATE, action) => {
                     totalQty: state.totalQty + quantity,
                     cart: [...state.cart],
                 };
+            }
+        case REMOVE_PRODUCT:
+            // remove item from cart by using filter method
+            const filteredCart = state.cart.filter((item) => item.id !== payload.id);
+            // get totalQty after data filtered
+            const total = state.totalQty - payload.qty;
+            return {
+                totalQty: total,
+                cart: filteredCart,
             }
         default:
             return {

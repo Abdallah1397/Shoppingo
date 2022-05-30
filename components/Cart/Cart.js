@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { toggleCart } from "../../redux/actions/cartStatus";
+import { removeProduct } from "../../redux/actions/cart";
 import Image from "next/image";
 import styles from "./cart.module.css";
 import EmptyCart from "../../public/assets/emptyCart.jpg";
@@ -15,6 +16,10 @@ const Cart = () => {
     // closeCart
     const closeCart = () => {
         dispatch(toggleCart());
+    };
+    // Delete Item Function
+    const deleteItem = (item) => {
+        dispatch(removeProduct(item));
     };
     return (
         // Check State to make the cart visible
@@ -56,14 +61,23 @@ const Cart = () => {
                                     <Image
                                         src={item.image}
                                         alt={item.title}
-                                        width="100"
-                                        height="100"
+                                        width="80"
+                                        height="80"
+                                        quality={100}
                                     />
-                                    <div>
+                                    <div className={styles.cartItemDetails}>
                                         <h5>{item.title} Tote</h5>
                                         <span>
                                             {item.qty}x{item.price}
                                         </span>
+                                    </div>
+                                    {/* Delete Item */}
+                                    <div className={styles.deleteItem}>
+                                        <i
+                                            className="fa fa-trash"
+                                            aria-hidden="true"
+                                            onClick={() => deleteItem(item)}
+                                        ></i>
                                     </div>
                                 </div>
                             );
@@ -77,13 +91,16 @@ const Cart = () => {
                                 width="200"
                                 height="200"
                                 layout="responsive"
+                                quality={100}
+
                             />
                             <p>Your Shopping Cart is Empty</p>
                         </div>
                     )}
                 </div>
-                {/* Total  */}
-                <div className={styles.totalWrapperDiv}>Total is $ {total}</div>
+                {cartData.totalQty > 0 ? (
+                    <div className={styles.totalWrapperDiv}>Total is $ {total}</div>
+                ) : null}
             </div>
         </div>
     );

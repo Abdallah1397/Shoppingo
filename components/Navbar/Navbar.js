@@ -22,6 +22,7 @@ const Navbar = () => {
 
     return (
         <>
+            {/* Navbar */}
             <nav className={styles.navbar}>
                 {/* Logo */}
                 <div className={styles.logo}>

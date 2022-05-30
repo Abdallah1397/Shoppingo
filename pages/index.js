@@ -9,7 +9,7 @@ export default function Home({ bags }) {
   // pagination state
   const [currentPage, setCurrentPage] = useState(0);
   // products per page
-  const productPerPage = 4;
+  const productPerPage = 8;
   const offset = currentPage * productPerPage;
   // get selected data
   const currentPageData = bags.slice(offset, offset + productPerPage);

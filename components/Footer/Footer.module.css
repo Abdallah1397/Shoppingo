@@ -1,131 +1,133 @@
 .footer {
-    background-color: #000;
-    color: #fff;
-    padding: 5px;
-    text-align: center;
-
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
 }
 
 /* Logo */
 .footer h2 {
-    font-family: 'Lobster', cursive;
-    font-size: 2.9rem;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding: 1rem 0;
+  font-family: "Lobster", cursive;
+  font-size: 2.9rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 1rem 0;
 }
-.subscribeHeader h5{
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding: 1rem 0;
+.subscribeHeader h5 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 1rem 0;
 }
-.subscribeHeader p{
-    font-size: 0.8rem;
-    margin-block-start: 0;
-    margin-block-end: 0;
+.subscribeHeader p {
+  font-size: 0.8rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 /* Subscribe */
-.subscribe{
-    padding-top: .7rem;
+.subscribe {
+  padding-top: 0.7rem;
 }
 .subscribe input {
-    padding: 10px;
-    width: 30%;
-    border: none;
+  padding: 10px;
+  width: 30%;
+  border: none;
 }
 .subscribe button {
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    letter-spacing: 2px;
-    background-color:#969393 ;
-    color: #fff;
-    background-color: rgb(150, 113, 1);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 2px;
+  background-color: #969393;
+  color: #fff;
+  background-color: rgb(150, 113, 1);
 }
 .subscribe button:hover {
-    transition: 1s;
+  transition: 1s;
 }
 /* Footer Information contains Instructions & Contact & Social Media */
 .footerInformatians {
-    display: flex;
-    padding: 3.5rem 0 5rem 0;
-    width: 80%;
-    margin: 0 10%;
+  display: flex;
+  padding: 3.5rem 0 5rem 0;
+  width: 80%;
+  margin: 0 10%;
 }
 
 .footerInformatians div {
-    width: 33%;
-    text-align: center;
+  width: 33%;
+  text-align: center;
+}
+.footerInformatians p {
+  font-size: 0.8rem;
+  color: #969393;
 }
 
 /* Section Title */
 .footer h4 {
-    line-height: 2em;
-    letter-spacing: 2px;
-
+  line-height: 2em;
+  letter-spacing: 2px;
 }
 
 /* Section subtitle */
 .footer p {
-    line-height: 1.5em;
+  line-height: 1.5em;
 }
 
 .footer h4,
 .footer p {
-    margin-block-start: 0;
-    margin-block-end: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 /* Social Media Icon Div */
 .socialMediaIcons {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 /* Links */
 .insta,
 .facebook,
 .pinterest {
-    border: 1px solid #fff;
-    border-radius: 50%;
-    margin: 0.2rem;
-    /* padding: 0.5rem; */
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin: 0.2rem;
+  /* padding: 0.5rem; */
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.insta:hover{
-    background-color:#ea1164 ;
-    transition: 1s;
+.insta:hover {
+  background-color: #ea1164;
+  transition: 1s;
 }
-.facebook:hover{
-    background-color:#3B5998 ;
-    transition: 1s;
+.facebook:hover {
+  background-color: #3b5998;
+  transition: 1s;
 }
-.pinterest:hover{
-    background-color:#cb2027 ;
-    transition: 1s;
+.pinterest:hover {
+  background-color: #cb2027;
+  transition: 1s;
 }
 
 /* Extra small devices (phones, 768px and down) */
 @media screen and (max-width: 768px) {
-    .subscribe input {
-        width: 50%;
-    }
-    .footerInformatians {
-        display: block;
-        padding: 2rem 0;
-        width: 80%;
-        margin: 0 10%;
-    }
+  .subscribe input {
+    width: 50%;
+  }
+  .footerInformatians {
+    display: block;
+    padding: 2rem 0;
+    width: 80%;
+    margin: 0 10%;
+  }
 
-    .footerInformatians div {
-        width: 100%;
-        text-align: center;
-        margin-top: 20px;
-    }
+  .footerInformatians div {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
 }

@@ -9,3 +9,10 @@ export const addProduct = (item, qty) => {
         quantity: qty,
     }
 }
+// Remove Product
+export const removeProduct = (item) => {
+    return {
+        type: REMOVE_PRODUCT,
+        payload: item,
+    }
+}
