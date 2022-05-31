@@ -37,9 +37,7 @@ const CartReducer = (state = INITIAL_STATE, action) => {
                 cart: filteredCart,
             }
         default:
-            return {
-                ...state,
-            };
+            return state;
     }
 };
 export default CartReducer;
