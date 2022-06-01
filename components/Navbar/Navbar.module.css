@@ -11,8 +11,7 @@
   background: #fff;
   border-bottom: 1px solid #eaeaea;
   overflow: hidden;
-  padding: 0 4rem;
-  line-height: 1.5rem;
+  padding: 1rem 4rem;
 }
 /* Logo */
 .logo {
@@ -71,7 +70,7 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: -12px;
+  top: -8px;
   right: 0px;
   background-color: #2266bb;
   color: #fff;
@@ -79,7 +78,7 @@
 /* Extra small devices (phones, 768px and down) */
 @media screen and (max-width: 768px) {
   .navbar{
-    padding: 0;
+    padding: 1.2rem 0;
   }
   .navbar_items {
     display: none;

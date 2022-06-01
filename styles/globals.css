@@ -2,8 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif !important;
-
+  font-family: "Poppins", sans-serif ;
 }
 
 a {
@@ -13,8 +12,15 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.container{
+.container {
   margin: 0 3rem;
-  
+}
+/* Extra small devices (phones, 768px and down) */
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 0 1rem;
+  }
 }

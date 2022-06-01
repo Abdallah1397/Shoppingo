@@ -17,11 +17,12 @@ const SingleProduct = (props) => {
         <div>
             <ProductDetails
                 image={props.bag.image}
-                title={props.bag.title}
+                title={`${props.bag.title} Tote`}
                 price={props.bag.price}
                 desc={props.bag.desc}
                 onChange={onQtyChange}
                 onClick={() => dispatch(addProduct(props.bag, qtyNum))}
+                rate={props.bag.rate}
             />
         </div>
     );

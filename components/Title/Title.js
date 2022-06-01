@@ -1,10 +1,12 @@
-import styles from "./title.module.css"
+import styles from "./title.module.css";
+
+// Title Component
 const Title = ({ title, id }) => {
     return (
-        <div className={styles.title} id={id}>
-            <div />
-            <h1>{title}</h1>
-            <div />
+        <div className={styles.titleComponet} id={id}>
+            <div className={styles.titleLine} />
+            <h3 className={styles.title}>{title}</h3>
+            <div className={styles.titleLine} />
         </div>
     );
 };

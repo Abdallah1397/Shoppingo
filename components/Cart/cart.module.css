@@ -1,7 +1,7 @@
 /* Main View default is hidden but if the cart is open we will add .show to this class name*/
 .cartMainView{
   height: 100%;
-  top: 4.8rem;
+  top: 4.7rem;
   right: 0;
   bottom: 0;
   left: 0;
@@ -23,7 +23,7 @@
   width: 20rem;
   height: 100%;
   right: 0;
-  padding: 0rem 2rem 4rem 2rem;
+  padding: 1rem 2rem 4rem 2rem;
   transform: translateX(100%);
   position: absolute;
   text-align: center;
@@ -38,6 +38,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 1rem;
 }
 .title {
   font-size: 1.3rem;
@@ -61,13 +62,13 @@
   display: flex;
   align-items: center;
   text-align: start;
-  line-height: 0.1rem;
   margin-left: -1rem;
   padding-right: 1.3rem;
 }
 .cartItemDetails{
   text-transform: capitalize;
   flex-grow: 1;
+  padding-top:1.5rem ;
 }
 .deleteItem i{
   cursor: pointer;

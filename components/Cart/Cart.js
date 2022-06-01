@@ -68,7 +68,7 @@ const Cart = () => {
                                     <div className={styles.cartItemDetails}>
                                         <h5>{item.title} Tote</h5>
                                         <span>
-                                            {item.qty}x{item.price}
+                                            {item.qty}x ${item.price}
                                         </span>
                                     </div>
                                     {/* Delete Item */}
@@ -99,7 +99,7 @@ const Cart = () => {
                     )}
                 </div>
                 {cartData.totalQty > 0 ? (
-                    <div className={styles.totalWrapperDiv}>Total is $ {total}</div>
+                    <div className={styles.totalWrapperDiv}>Total is ${total}</div>
                 ) : null}
             </div>
         </div>

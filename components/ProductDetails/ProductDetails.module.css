@@ -1,108 +1,126 @@
 /* Product Details */
 /* *********************************************** */
+/* Main Component Style */
 .productDetails {
-    display: flex;
-    margin: 3% 8%;
+  display: flex;
+  margin: 2%;
+  flex-wrap: wrap;
+  padding-bottom: 3rem;
 }
-.productDiv {
-    width: 50%;
+/* Image Part */
+.imageWrapper {
+  width: 50%;
 }
 .imageDiv {
-    border: 1px solid #eaeaea;
-    width: 70%;
-    margin: 0 15%;
+  border: 1px solid #eaeaea;
+  width: 70%;
+  margin: 0 15%;
 }
-
-.details {
-    width: 50%;
-    text-transform: capitalize;
-    font-size: 1.4rem;
+/* Details Part */
+.detailsWrapper {
+  width: 50%;
+  text-transform: capitalize;
+  font-weight: bold;
 }
-
-.details span {
-    font-size: medium;
-    display: block;
-    margin-top: 20px;
+.mainDetails {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eaeaea;
 }
-
-.details input {
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #eaeaea;
-    font-size: small;
+.mainDetails_Title {
+  font-size: 2rem;
+  text-transform: capitalize;
 }
-
-.details p {
-    font-size: medium;
-    width: 60%;
-    text-align: justify;
+.mainDetails_Price {
+  font-size: 1.7rem;
+  color: #26b;
+  font-weight: bold;
+  padding: 0.6rem 0 .1rem 0;
 }
-
+.mainDetails_Description {
+  font-size: 0.9rem;
+  text-align: justify;
+  color: #666;
+  width: 85%;
+  font-weight: 400;
+  padding: 1rem 0;
+}
+.mainDetails_Qty {
+  font-size: 0.9rem;
+  display: block;
+}
+.qtyNumber {
+  margin-top: 10px;
+  padding: 0.8rem 0.5rem;
+  border: 1px solid #eaeaea;
+  font-size: 0.8rem;
+  font-family: "Poppins", sans-serif;
+}
 .addToCartBtn {
-    background-color: black;
-    color: #fff;
-    width: 60%;
-    margin-top: 1rem;
-    padding: .5rem;
+  background-color: #26b;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  margin-top: 1rem;
+  padding: 1rem 0.8rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 /* Medium devices (landscape tablets, 768px and up) */
-@media  screen and (min-width: 768px) and (max-width: 992px){
-    .productDiv {
-        width: 50%;
-    }
-    .imageDiv {
-        width: 90%;
-        margin: 5%;
-    }
-    .details {
-        width: 50%;
-        font-size: 2rem;
-    }
-    .details p {
-        font-size: large;
-        width: 100%;
-    }
-    .details input {
-        padding: 10px;
-        font-size: large;
-        width: 100px;
-    }
-    .addToCartBtn {
-        width: 100%;
-        margin-top: 1rem;
-        padding: .5rem;
-        font-size: large;
-    }
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .imageWrapper {
+    width: 50%;
+  }
+  .imageDiv {
+    width: 90%;
+    margin: 5%;
+  }
+  .detailsWrapper {
+    width: 50%;
+    font-size: 2rem;
+  }
+  .detailsDesc {
+    font-size: large;
+    width: 100%;
+  }
+  .qtyNumber {
+    padding: 10px;
+    font-size: large;
+    width: 100px;
+  }
 }
 /* Extra small devices (phones, 768px and down) */
-@media  screen and (max-width: 768px) {
-    .productDetails {
-        display: block;
-    }
-    .productDiv {
-        width: 100%;
-    }
-    .imageDiv {
-        width: 90%;
-        margin: 5%;
-    }
-    .details {
-        width: 100%;
-        font-size: 2rem;
-    }
-    .details p {
-        font-size: large;
-        width: 100%;
-    }
-    .details input {
-        padding: 10px;
-        font-size: large;
-        width: 100px;
-    }
-    .addToCartBtn {
-        width: 100%;
-        margin-top: 1rem;
-        padding: .5rem;
-        font-size: large;
-    }
+@media screen and (max-width: 768px) {
+  .productDetails {
+    flex-direction: column;
+  }
+  .imageWrapper {
+    width: 100%;
+  }
+  .imageDiv {
+    width: 96%;
+    margin: 2%;
+  }
+  .detailsWrapper {
+    width: 100%;
+  }
+  .mainDetails {
+    width: 96%;
+    margin: 2%;
+  }
+  .mainDetails_Description {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .qtyNumber {
+    padding: 10px;
+    font-size: large;
+    width: 100px;
+  }
+  .addToCartBtn {
+    margin: 1rem 2%;
+    padding: 0.8rem;
+  }
 }

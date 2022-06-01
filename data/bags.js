@@ -4,6 +4,7 @@ export const bags = [
         title: "apricot",
         image: "/assets/bags/apricot.png",
         price: 15.00,
+        rate: 3.5,
         desc: "A tote is simply a large bag suitable for carrying (or toting) lots of stuff. (They’re also sometimes called carry-all bags for the same reason.) There is a wide range of tote bag styles.",
     },
     {
@@ -11,6 +12,7 @@ export const bags = [
         title: "banana",
         image: "/assets/bags/banana.png",
         price: 15.00,
+        rate: 3.5,
         desc: "A tote is simply a large bag suitable for carrying (or toting) lots of stuff. (They’re also sometimes called carry-all bags for the same reason.) There is a wide range of tote bag styles.",
     },
     {
@@ -18,6 +20,7 @@ export const bags = [
         title: "cactus",
         image: "/assets/bags/cactus.png",
         price: 15.00,
+        rate: 4.5,
         desc: "A tote is simply a large bag suitable for carrying (or toting) lots of stuff. (They’re also sometimes called carry-all bags for the same reason.) There is a wide range of tote bag styles.",
     },
     {
@@ -25,6 +28,7 @@ export const bags = [
         title: "cheetah",
         image: "/assets/bags/cheetah.png",
         price: 15.00,
+        rate: 4,
         desc: "A tote is simply a large bag suitable for carrying (or toting) lots of stuff. (They’re also sometimes called carry-all bags for the same reason.) There is a wide range of tote bag styles.",
     },
     {
@@ -32,6 +36,7 @@ export const bags = [
         title: "colorful",
         image: "/assets/bags/colorful.png",
         price: 15.00,
+        rate: 5,
         desc: "A tote is simply a large bag suitable for carrying (or toting) lots of stuff. (They’re also sometimes called carry-all bags for the same reason.) There is a wide range of tote bag styles.",
     },
     {
@@ -39,6 +44,7 @@ export const bags = [
         title: "dots",
         image: "/assets/bags/dots.png",
         price: 15.00,
+        rate: 3,
         desc: "A tote is simply a large bag suitable for carrying (or toting) lots of stuff. (They’re also sometimes called carry-all bags for the same reason.) There is a wide range of tote bag styles.",
     },
     {
@@ -46,6 +52,7 @@ export const bags = [
         title: "fingers",
         image: "/assets/bags/fingers.png",
         price: 15.00,
+        rate: 2,
         desc: "A tote is simply a large bag suitable for carrying (or toting) lots of stuff. (They’re also sometimes called carry-all bags for the same reason.) There is a wide range of tote bag styles.",
     },
     {
@@ -53,6 +60,7 @@ export const bags = [
         title: "leafs",
         image: "/assets/bags/leafs.png",
         price: 15.00,
+        rate: 4.5,
         desc: "A tote is simply a large bag suitable for carrying (or toting) lots of stuff. (They’re also sometimes called carry-all bags for the same reason.) There is a wide range of tote bag styles.",
     },
     {
@@ -60,6 +68,7 @@ export const bags = [
         title: "lemon",
         image: "/assets/bags/lemon.png",
         price: 15.00,
+        rate: 4.5,
         desc: "A tote is simply a large bag suitable for carrying (or toting) lots of stuff. (They’re also sometimes called carry-all bags for the same reason.) There is a wide range of tote bag styles.",
     },
     {
@@ -67,6 +76,7 @@ export const bags = [
         title: "light blue",
         image: "/assets/bags/light blue.png",
         price: 15.00,
+        rate: 3.5,
         desc: "A tote is simply a large bag suitable for carrying (or toting) lots of stuff. (They’re also sometimes called carry-all bags for the same reason.) There is a wide range of tote bag styles.",
     },
     {
@@ -74,6 +84,7 @@ export const bags = [
         title: "swimmer",
         image: "/assets/bags/swimmer.png",
         price: 15.00,
+        rate: 2.5,
         desc: "A tote is simply a large bag suitable for carrying (or toting) lots of stuff. (They’re also sometimes called carry-all bags for the same reason.) There is a wide range of tote bag styles.",
     },
     {
@@ -81,6 +92,7 @@ export const bags = [
         title: "tiger",
         image: "/assets/bags/tiger.png",
         price: 15.00,
+        rate: 4,
         desc: "A tote is simply a large bag suitable for carrying (or toting) lots of stuff. (They’re also sometimes called carry-all bags for the same reason.) There is a wide range of tote bag styles.",
     },
 ];

@@ -39,9 +39,8 @@
   border: none;
   cursor: pointer;
   letter-spacing: 2px;
-  background-color: #969393;
   color: #fff;
-  background-color: rgb(150, 113, 1);
+  background-color: #26b;
 }
 .subscribe button:hover {
   transition: 1s;

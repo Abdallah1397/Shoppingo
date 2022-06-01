@@ -1,16 +1,33 @@
-                /* Title */
+/* Title */
 /* *********************************************** */
-.title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.titleComponet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
 }
-.title div{
-    height: 2px;
-    background: #dddada;
-    width: 100%;
+.title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
 }
-.title h1{
-    font-family: 'Lobster', cursive;
-    padding: 0 30px;
+.titleLine {
+  height: 1px;
+  background: #dddada;
+  width: 100%;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .titleLine {
+    width: 40%;
+  }
+}
+/* Extra small devices (phones, 768px and down) */
+@media screen and (max-width: 768px) {
+  .titleLine {
+    width: 20%;
+  }
 }
