@@ -46,7 +46,7 @@
 }
 .closeIcon {
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 /* Cart Content Div */
 .cartContent{
@@ -68,10 +68,14 @@
 .cartItemDetails{
   text-transform: capitalize;
   flex-grow: 1;
-  padding-top:1.5rem ;
+  padding-top:1rem ;
 }
-.deleteItem i{
+.deleteItem{
   cursor: pointer;
+  font-size: 1.2rem;
+}
+.deleteItem:hover{
+  color: #711b1b;
 }
 /* Total DiV */
 .totalWrapperDiv{

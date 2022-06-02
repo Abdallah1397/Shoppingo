@@ -51,8 +51,10 @@
 opacity: 0.3;
 }
 .products{
-  display: block;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 /* Large devices (laptops/desktops, 992px and up) */

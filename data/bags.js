@@ -1,7 +1,7 @@
 export const bags = [
     {
         id: "1",
-        title: "apricot",
+        title: "apricot tote",
         image: "/assets/bags/apricot.png",
         price: 15.00,
         rate: 3.5,
@@ -9,7 +9,7 @@ export const bags = [
     },
     {
         id: "2",
-        title: "banana",
+        title: "banana tote",
         image: "/assets/bags/banana.png",
         price: 15.00,
         rate: 3.5,
@@ -17,7 +17,7 @@ export const bags = [
     },
     {
         id: "3",
-        title: "cactus",
+        title: "cactus tote",
         image: "/assets/bags/cactus.png",
         price: 15.00,
         rate: 4.5,
@@ -25,7 +25,7 @@ export const bags = [
     },
     {
         id: "4",
-        title: "cheetah",
+        title: "cheetah tote",
         image: "/assets/bags/cheetah.png",
         price: 15.00,
         rate: 4,
@@ -33,7 +33,7 @@ export const bags = [
     },
     {
         id: "5",
-        title: "colorful",
+        title: "colorful tote",
         image: "/assets/bags/colorful.png",
         price: 15.00,
         rate: 5,
@@ -41,7 +41,7 @@ export const bags = [
     },
     {
         id: "6",
-        title: "dots",
+        title: "dots tote",
         image: "/assets/bags/dots.png",
         price: 15.00,
         rate: 3,
@@ -49,7 +49,7 @@ export const bags = [
     },
     {
         id: "7",
-        title: "fingers",
+        title: "fingers tote",
         image: "/assets/bags/fingers.png",
         price: 15.00,
         rate: 2,
@@ -57,7 +57,7 @@ export const bags = [
     },
     {
         id: "8",
-        title: "leafs",
+        title: "leafs tote",
         image: "/assets/bags/leafs.png",
         price: 15.00,
         rate: 4.5,
@@ -65,7 +65,7 @@ export const bags = [
     },
     {
         id: "9",
-        title: "lemon",
+        title: "lemon tote",
         image: "/assets/bags/lemon.png",
         price: 15.00,
         rate: 4.5,
@@ -73,7 +73,7 @@ export const bags = [
     },
     {
         id: "10",
-        title: "light blue",
+        title: "light blue tote",
         image: "/assets/bags/light blue.png",
         price: 15.00,
         rate: 3.5,
@@ -81,7 +81,7 @@ export const bags = [
     },
     {
         id: "11",
-        title: "swimmer",
+        title: "swimmer tote",
         image: "/assets/bags/swimmer.png",
         price: 15.00,
         rate: 2.5,
@@ -89,7 +89,7 @@ export const bags = [
     },
     {
         id: "12",
-        title: "tiger",
+        title: "tiger tote",
         image: "/assets/bags/tiger.png",
         price: 15.00,
         rate: 4,

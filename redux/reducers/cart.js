@@ -1,4 +1,4 @@
-import { ADD_PRODUCT, REMOVE_PRODUCT } from "../types/cart";
+import { ADD_ONE_PRODUCT, ADD_PRODUCT, REMOVE_PRODUCT } from "../types/cart";
 
 const INITIAL_STATE = {
     totalQty: 0,
@@ -9,6 +9,22 @@ const CartReducer = (state = INITIAL_STATE, action) => {
     // Object Destructuring
     const { type, payload, quantity } = action;
     switch (type) {
+        case ADD_ONE_PRODUCT:
+            // check if product exist or not
+            let productFound = state.cart.find((item) => item.id === payload.id);
+            if (!productFound) {
+                payload.qty = 1;
+                return {
+                    totalQty: state.totalQty + 1,
+                    cart: [...state.cart, payload],
+                }
+            } else {
+                payload.qty++;
+                return {
+                    totalQty: state.totalQty + 1,
+                    cart: [...state.cart],
+                }
+            }
         case ADD_PRODUCT:
             // check if the item found in the cart or not
             let found = state.cart.find((item) => item.id === payload.id);

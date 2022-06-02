@@ -17,7 +17,7 @@ const SingleProduct = (props) => {
         <div>
             <ProductDetails
                 image={props.bag.image}
-                title={`${props.bag.title} Tote`}
+                title={props.bag.title}
                 price={props.bag.price}
                 desc={props.bag.desc}
                 onChange={onQtyChange}

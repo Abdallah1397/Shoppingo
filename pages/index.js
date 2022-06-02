@@ -1,15 +1,18 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import ReactPaginate from "react-paginate";
+import { addOneProduct } from "../redux/actions/cart";
 import styles from "../styles/Home.module.css";
 import Title from "../components/Title/Title";
 import About from "../components/About/About";
 import Product from "../components/product/product";
 
 export default function Home({ bags }) {
+  const dispatch = useDispatch();
   // pagination state
   const [currentPage, setCurrentPage] = useState(0);
   // products per page
-  const productPerPage = 8;
+  const productPerPage = 6;
   const offset = currentPage * productPerPage;
   // get selected data
   const currentPageData = bags.slice(offset, offset + productPerPage);
@@ -36,6 +39,8 @@ export default function Home({ bags }) {
                 src={item.image}
                 id={item.id}
                 price={item.price}
+                rate={item.rate}
+                onClick={() => dispatch(addOneProduct(item))}
               />
             );
           })}

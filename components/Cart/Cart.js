@@ -1,4 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
+import { MdDeleteForever } from "react-icons/md";
+import { AiOutlineClose } from "react-icons/ai";
 import { toggleCart } from "../../redux/actions/cartStatus";
 import { removeProduct } from "../../redux/actions/cart";
 import Image from "next/image";
@@ -43,11 +45,7 @@ const Cart = () => {
                 <div className={styles.cartHeader}>
                     <p className={styles.title}>Your Cart</p>
                     <p className={styles.closeIcon}>
-                        <i
-                            className="fa fa-times fa-lg"
-                            aria-hidden="true"
-                            onClick={closeCart}
-                        ></i>
+                        <AiOutlineClose onClick={closeCart} />
                     </p>
                 </div>
                 <div className={styles.cartContent}>
@@ -66,18 +64,14 @@ const Cart = () => {
                                         quality={100}
                                     />
                                     <div className={styles.cartItemDetails}>
-                                        <h5>{item.title} Tote</h5>
+                                        <h5>{item.title}</h5>
                                         <span>
                                             {item.qty}x ${item.price}
                                         </span>
                                     </div>
                                     {/* Delete Item */}
                                     <div className={styles.deleteItem}>
-                                        <i
-                                            className="fa fa-trash"
-                                            aria-hidden="true"
-                                            onClick={() => deleteItem(item)}
-                                        ></i>
+                                        <MdDeleteForever onClick={() => deleteItem(item)} />
                                     </div>
                                 </div>
                             );
@@ -92,7 +86,6 @@ const Cart = () => {
                                 height="200"
                                 layout="responsive"
                                 quality={100}
-
                             />
                             <p>Your Shopping Cart is Empty</p>
                         </div>

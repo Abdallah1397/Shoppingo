@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
-import { Link as LinkScroll, animateScroll } from "react-scroll";
+import { Link as LinkScroll } from "react-scroll";
 import Link from "next/link";
+import { GrCart, GrMenu } from 'react-icons/gr'
 import { toggleCart } from "../../redux/actions/cartStatus";
 import styles from "./Navbar.module.css";
 import OverlayNav from "../OverlayNav/OverLayNav";
@@ -53,11 +54,11 @@ const Navbar = () => {
                 {/* Icons */}
                 <ul className={styles.nav_icons}>
                     <li className={styles.icon}>
-                        <i className="fa fa-shopping-cart" aria-hidden="true" onClick={toggleCartFunction}></i>
+                        <GrCart onClick={toggleCartFunction} />
                         <span className={styles.spanNumber}>{qty}</span>
                     </li>
                     <li className={styles.icon}>
-                        <i className="fa fa-bars" onClick={openNavigationBar}></i>
+                        <GrMenu onClick={openNavigationBar} />
                     </li>
                 </ul>
                 <OverlayNav />

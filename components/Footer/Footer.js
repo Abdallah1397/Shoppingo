@@ -1,3 +1,4 @@
+import { FaFacebookF, FaInstagram, FaPinterest } from 'react-icons/fa';
 import styles from "./Footer.module.css";
 
 // Footer Compoent
@@ -46,13 +47,13 @@ const Footer = () => {
             {/* Social Media Icons */}
             <div className={styles.socialMediaIcons}>
                 <a href="#" className={styles.insta}>
-                    <i className="fa fa-instagram" />
+                    <FaInstagram />
                 </a>
                 <a href="#" className={styles.facebook}>
-                    <i className="fa fa-facebook" />
+                    <FaFacebookF />
                 </a>
                 <a href="#" className={styles.pinterest}>
-                    <i className="fa fa-pinterest" />
+                    <FaPinterest />
                 </a>
             </div>
         </div>
