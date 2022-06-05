@@ -1,7 +1,6 @@
-import Head from "next/head";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import Cart from "../Cart/Cart";
+import Hero from '../Hero/Hero';
 
 // Layout component handle page structure
 const Layout = (props) => {
@@ -9,6 +8,7 @@ const Layout = (props) => {
         <div>
             <Navbar />
             {props.children}
+            <Hero />
             <Footer />
         </div>
     );
