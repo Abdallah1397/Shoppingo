@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import ReactPaginate from "react-paginate";
 import { addOneProduct } from "../redux/actions/cart";
+import { setPage } from "../redux/actions/paginate";
 import styles from "../styles/Home.module.css";
 import Title from "../components/Title/Title";
 import About from "../components/About/About";
@@ -9,8 +9,8 @@ import Product from "../components/product/product";
 
 export default function Home({ bags }) {
   const dispatch = useDispatch();
-  // pagination state
-  const [currentPage, setCurrentPage] = useState(0);
+  // get current page state
+  const currentPage = useSelector((state) => state.currentPage.currentPage);
   // products per page
   const productPerPage = 6;
   const offset = currentPage * productPerPage;
@@ -20,7 +20,8 @@ export default function Home({ bags }) {
   const pageCount = Math.ceil(bags.length / productPerPage);
   // page change function
   const handlePageChange = ({ selected }) => {
-    setCurrentPage(selected);
+    dispatch(setPage(selected));
+    console.log(selected);
   };
   return (
     <div>
@@ -55,6 +56,7 @@ export default function Home({ bags }) {
             nextLinkClassName={styles.nextPage}
             disabledClassName={styles.disabledPage}
             activeClassName={styles.activePage}
+            initialPage={currentPage}
           />
         </div>
       </div>
@@ -64,7 +66,7 @@ export default function Home({ bags }) {
 }
 
 // get all data with getStaticProps
-// this function gets called at build time on server side
+// this function gets called at buil server side
 export async function getStaticProps() {
   const res = await fetch("http://127.0.0.1:3000/api/bags");
   const bags = await res.json();

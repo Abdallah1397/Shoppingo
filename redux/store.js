@@ -9,7 +9,7 @@ import rootReducers from "./reducers/rootReucers";
 const persistConfig = {
     key: 'primary',
     storage,
-    whitelist: ['cart'],
+    whitelist: ['cart', 'currentPage'],
 }
 
 // Persisted Reducer returns an enhaced Reducer
