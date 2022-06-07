@@ -1,0 +1,101 @@
+/* Contact Component Style File */
+/* Main Div Style */
+.contactWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+}
+/* Contact Information */
+.contactInformations{
+    width: 25%;
+    padding: 0 1rem;
+}
+.contactInformations_mainTitle{
+    text-transform: uppercase;
+    padding-bottom: .5rem;
+}
+.contactInformations_subTitle{
+    text-transform: uppercase;
+    padding-top: 1.5rem;
+}
+/* Connection Form */
+.formWrapper{
+    background-color: #f7f6f6;
+    width: 73%;
+    padding: 1rem 1rem 3rem 1rem;
+}
+/* Let's Connect and its sub title */
+.connectWrapper{
+    padding-bottom: 1rem;
+}
+.connectWrapper_subTitle{
+    font-size: .9rem;
+}
+/* Input Field */
+.inputField{
+    border: 1px solid #eee;
+    width: 49%;
+    margin-right: 1%;
+    padding: .8rem;
+    outline: none;
+    font-family: "Poppins", sans-serif ;
+}
+/* Message Area */
+.messageArea{
+    margin: 2rem 1% 0 0;
+    outline: none;
+    width: 99%;
+    border: 1px solid #eee;
+    padding: .8rem;
+    font-family: "Poppins", sans-serif ;
+
+}
+/*  Submit Button */
+.submitButton{
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    border: 1px solid #eee;
+    background-color: #000;
+    color: #fff;
+    font-family: "Poppins", sans-serif ;
+    cursor: pointer;
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media  screen and (min-width: 992px) and (max-width: 1200px) {
+/* Contact Information */
+.contactInformations{
+    width: 35%;
+}
+/* Connection Form */
+.formWrapper{
+    width: 65%;
+}
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media  screen and (min-width: 768px) and (max-width: 992px){
+/* Contact Information */
+.contactInformations{
+    width: 40%;
+}
+/* Connection Form */
+.formWrapper{
+    width: 60%;
+}
+}
+/* Extra small devices (phones, 768px and down) */
+@media  screen and (max-width: 768px) {
+/* Contact Information */
+.contactInformations{
+    width: 100%;
+}
+/* Connection Form */
+.formWrapper{
+    width: 100%;
+    margin-top: 2rem;
+}
+/* Input Field */
+.inputField{
+    width: 99%;
+    margin-top: .7rem;
+}
+}

@@ -1,10 +1,10 @@
 /* Client Slider Component Style */
 .clientSlider{
     background-color:#f7f6f6 ;
-    padding: 1rem 3rem 5rem 3rem;
+    padding: 1rem 3rem 3rem 3rem;
     overflow: hidden;
     text-align: center;
 }
 .slider{
-    padding: 2rem 0;
+    padding: 1rem 0;
 }

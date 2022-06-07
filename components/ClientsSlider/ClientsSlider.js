@@ -53,19 +53,19 @@ const ClientsSlider = () => {
                     <Image src={logo1} alt="logo1" width="180" height="100" quality={100} />
                 </div>
                 <div>
-                    <Image src={logo2} alt="logo1" width="180" height="100" quality={100} />
+                    <Image src={logo2} alt="logo2" width="180" height="100" quality={100} />
                 </div>
                 <div>
-                    <Image src={logo3} alt="logo1" width="180" height="100" quality={100} />
+                    <Image src={logo3} alt="logo3" width="180" height="100" quality={100} />
                 </div>
                 <div>
-                    <Image src={logo4} alt="logo1" width="180" height="100" quality={100} />
+                    <Image src={logo4} alt="logo4" width="180" height="100" quality={100} />
                 </div>
                 <div>
-                    <Image src={logo5} alt="logo1" width="180" height="100" quality={100} />
+                    <Image src={logo5} alt="logo5" width="180" height="100" quality={100} />
                 </div>
                 <div>
-                    <Image src={logo6} alt="logo1" width="180" height="100" quality={100} />
+                    <Image src={logo6} alt="logo6" width="180" height="100" quality={100} />
                 </div>
             </Slider>
         </div>

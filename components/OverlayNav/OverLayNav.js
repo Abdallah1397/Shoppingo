@@ -50,7 +50,7 @@ const OverlayNav = () => {
                 </h3>
                 <div>
                     <h3 onClick={closeNavigationBar}>
-                        <Link href="#">Contact</Link>
+                        <Link href="/contact">Contact</Link>
                     </h3>
                 </div>
             </div>
