@@ -1,43 +1,51 @@
 import { useState } from "react";
+import { Formik, Form, Field } from "formik";
+import * as Yup from "yup";
 import styles from "../styles/Contact.module.css";
 import contactBanner from "../public/assets/banners/contactBanner.png";
 import Banner from "../components/Banner/Banner";
 import Title from "../components/Title/Title";
 
+// Create Validation Schema with Yup
+const ConnectSchema = Yup.object().shape({
+    userName: Yup.string()
+        .min(2, "Too Short!")
+        .max(10, "Too Long!")
+        .required("Required!"),
+    mail: Yup.string().email("Invalid mail").required("Required!"),
+    message: Yup.string().required("Required!"),
+});
 // Contact Component
 const Contact = () => {
     // User Informations State
     const [userData, setUserData] = useState({
-        name: "",
+        userName: "",
         mail: "",
         message: "",
     });
     // Alert State
-    const [isEmptyName, setIsEmptyName] = useState(false);
-    const [isEmptyMail, setIsEmptyMail] = useState(false);
-    const [isEmptyMessage, setIsEmptyMessage] = useState(false);
-    // Object State Destructuring
-    const { name, mail, message } = userData;
-    // Input Field Change
-    const onFieldChange = (e) => {
-        setUserData({ ...userData, [e.target.id]: e.target.value });
-    };
-    // onSubmit Function
-    const onSubmit = (e) => {
-        e.preventDefault();
-        if (name === "" || mail === "" || message === "") {
-            if (name === "") {
-                setIsEmptyName(true);
-            }
-            if (mail === "") {
-                setIsEmptyMail(true);
-            }
-            if (message === "") {
-                setIsEmptyMessage(true);
-            }
-        } else {
-            document.getElementById("connectionForm").reset();
-        }
+    const [alertState, setAlertState] = useState(false);
+    // Destructuring State Object
+    const { userName, mail, message } = userData;
+    // OnSubmit Function
+    const handleSubmit = (values, actions) => {
+        // put the entired values into userData State
+        setUserData({
+            userName: values.userName,
+            mail: values.mail,
+            message: values.message,
+        });
+        // Reset Form
+        actions.resetForm({
+            values: {
+                userName: "",
+                mail: "",
+                message: "",
+            },
+        });
+        // Make the alert State true
+        setAlertState(true);
+        actions.setSubmitting(false);
     };
     return (
         <div>
@@ -75,51 +83,64 @@ const Contact = () => {
                     </div>
                     {/* Contact Form */}
                     <div className={styles.formWrapper}>
-                        <form onSubmit={onSubmit} id="connectionForm">
-                            <div className={styles.connectWrapper}>
-                                <h4 className={styles.connectWrapper_title}>Let's Connect </h4>
-                                <p className={styles.connectWrapper_subTitle}>
-                                    Your email addres will not be published. Required fields are
-                                    marked *
-                                </p>
-                            </div>
-                            <div>
-                                <div>
-                                    <input
-                                        id="name"
-                                        className={styles.inputField}
-                                        placeholder="your name"
-                                        type="text"
-                                        onChange={onFieldChange}
+                        {/* Let's Connect title and its subtitle */}
+                        <div className={styles.connectWrapper}>
+                            <h4 className={styles.connectWrapper_title}>Let's Connect </h4>
+                            <p className={styles.connectWrapper_subTitle}>
+                                Your email addres will not be published. Required fields are
+                                marked *
+                            </p>
+                        </div>
+                        {/* Connection Form with Formik */}
+                        <Formik
+                            initialValues={{ userName: "", mail: "", message: "" }}
+                            validationSchema={ConnectSchema}
+                            onSubmit={handleSubmit}
+                        >
+                            {({ errors, touched }) => (
+                                <Form>
+                                    {/* Name & Mail */}
+                                    <div className={styles.inputFields_Wrapper}>
+                                        <div className={styles.mainInput_div}>
+                                            <Field
+                                                name="userName"
+                                                placeholder="your name"
+                                                className={styles.inputField}
+                                            />
+                                            {errors.userName && touched.userName ? (
+                                                <div className={styles.errors}>{errors.userName}</div>
+                                            ) : null}
+                                        </div>
+                                        <div className={styles.mainInput_div}>
+                                            <Field
+                                                name="mail"
+                                                placeholder="your mail"
+                                                type="email"
+                                                className={styles.inputField}
+                                            />
+                                            {errors.mail && touched.mail ? (
+                                                <div className={styles.errors}>{errors.mail}</div>
+                                            ) : null}
+                                        </div>
+                                    </div>
+                                    {/* Message */}
+                                    <Field
+                                        name="message"
+                                        as="textarea"
+                                        rows={10}
+                                        placeholder="your message"
+                                        className={styles.messageArea}
                                     />
-                                    {isEmptyName ? <p>Your name is required!</p> : null}
-                                </div>
-                                <div>
-                                    <input
-                                        id="mail"
-                                        className={styles.inputField}
-                                        placeholder="your mail"
-                                        type="email"
-                                        onChange={onFieldChange}
-                                    />
-                                    {isEmptyMail ? <p>Your mail is required!</p> : null}
-                                </div>
-                            </div>
-                            <div>
-                                <textarea
-                                    id="message"
-                                    placeholder="your message"
-                                    rows={10}
-                                    className={styles.messageArea}
-                                    onChange={onFieldChange}
-                                />
-                                {isEmptyMessage ? <p>Your message is required!</p> : null}
-                            </div>
-                            {/* Submit Button */}
-                            <button type="submit" className={styles.submitButton}>
-                                Submit
-                            </button>
-                        </form>
+                                    {errors.message && touched.message ? (
+                                        <div className={styles.errors}>{errors.message}</div>
+                                    ) : null}
+                                    {/* Submit Button */}
+                                    <button type="submit" className={styles.submitButton}>
+                                        Submit
+                                    </button>
+                                </Form>
+                            )}
+                        </Formik>
                     </div>
                 </div>
             </div>

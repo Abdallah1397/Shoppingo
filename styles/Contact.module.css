@@ -31,14 +31,29 @@
 .connectWrapper_subTitle{
     font-size: .9rem;
 }
+/* inputFields_Wrapper contains two inputField Div's */
+.inputFields_Wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* main Div containt iputField with error message */
+.mainInput_div{
+    width: 49%;
+    margin-right: 1%;
+}
 /* Input Field */
 .inputField{
     border: 1px solid #eee;
-    width: 49%;
-    margin-right: 1%;
     padding: .8rem;
+    width: 100%;
     outline: none;
     font-family: "Poppins", sans-serif ;
+}
+/* Error */
+.errors{
+    color:#d82722;
+    text-transform: lowercase;
+    padding: .2rem;
 }
 /* Message Area */
 .messageArea{
@@ -93,9 +108,9 @@
     width: 100%;
     margin-top: 2rem;
 }
-/* Input Field */
-.inputField{
+/* main Div containt iputField with error message */
+.mainInput_div{
     width: 99%;
-    margin-top: .7rem;
+    margin-right: 1%;
 }
 }
