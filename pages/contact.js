@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import styles from "../styles/Contact.module.css";
 import contactBanner from "../public/assets/banners/contactBanner.png";
 import Banner from "../components/Banner/Banner";
@@ -17,38 +19,46 @@ const ConnectSchema = Yup.object().shape({
 });
 // Contact Component
 const Contact = () => {
-    // User Informations State
-    const [userData, setUserData] = useState({
-        userName: "",
-        mail: "",
-        message: "",
-    });
-    // Alert State
-    const [alertState, setAlertState] = useState(false);
-    // Destructuring State Object
-    const { userName, mail, message } = userData;
     // OnSubmit Function
-    const handleSubmit = (values, actions) => {
-        // put the entired values into userData State
-        setUserData({
-            userName: values.userName,
-            mail: values.mail,
-            message: values.message,
-        });
-        // Reset Form
-        actions.resetForm({
-            values: {
-                userName: "",
-                mail: "",
-                message: "",
+    const handleSubmit = async (values, actions) => {
+        // to control request time
+        const controller = new AbortController();
+        // get TimeOut by using TimeOutFunction
+        const TimeOut = setTimeout(() => controller.abort(), 1);
+        await fetch("http://localhost:3000/api/contactDetails", {
+            method: "POST",
+            body: JSON.stringify({ values }),
+            headers: {
+                "Content-Type": "application/json",
             },
-        });
-        // Make the alert State true
-        setAlertState(true);
-        actions.setSubmitting(false);
+            signal: controller.signal,
+        })
+            .then((res) => {
+                if (res.ok) {
+                    // clearTimeout(TimeOut);
+                    return res.json();
+                }
+                toast.error("Something went wrong!");
+                throw new Error("Something went wrong");
+            })
+            .then((data) => {
+                toast.success(`${data.userName}, your data saved successfully`);
+            })
+            .catch((err) => {
+                if (err[DOMException] === "The user aborted a request") {
+                    toast.error("Time out exceeded!")
+                } else {
+                    toast.error(`${err}`);
+                    console.log(err);
+                    console.log(controller);
+
+                }
+            });
     };
     return (
         <div>
+            {/* Toast Container */}
+            <ToastContainer autoClose={3000} position="top-right" theme="light" />
             {/* Contact Banner */}
             <Banner bannerBackground={contactBanner} />
             <div className="container">

@@ -10,14 +10,16 @@ const Product = (props) => {
         <div className={styles.product}>
             {/*Product Image  */}
             <Link href={`/${props.id}`} passHref>
-                <Image
-                    src={props.src}
-                    layout="responsive"
-                    width="10"
-                    height="10"
-                    alt={props.title}
-                    className={styles.productImage}
-                />
+                <a>
+                    <Image
+                        src={props.src}
+                        layout="responsive"
+                        width="10"
+                        height="10"
+                        alt={props.title}
+                        className={styles.productImage}
+                    />
+                </a>
             </Link>
             {/* Product Information */}
             <div className={styles.informations}>

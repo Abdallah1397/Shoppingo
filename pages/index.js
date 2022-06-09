@@ -21,7 +21,6 @@ export default function Home({ bags }) {
   // page change function
   const handlePageChange = ({ selected }) => {
     dispatch(setPage(selected));
-    console.log(selected);
   };
   return (
     <div>

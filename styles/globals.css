@@ -18,6 +18,9 @@ a {
 .container {
   margin: 0 3rem;
 }
+/* .toastAlret{
+  position: absolute;
+} */
 /* Extra small devices (phones, 768px and down) */
 @media screen and (max-width: 768px) {
   .container {
