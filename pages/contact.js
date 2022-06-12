@@ -24,7 +24,7 @@ const Contact = () => {
         // to control request time
         const controller = new AbortController();
         // get TimeOut by using TimeOutFunction
-        const TimeOut = setTimeout(() => controller.abort(), 1);
+        const TimeOut = setTimeout(() => controller.abort(), 10000);
         await fetch("http://localhost:3000/api/contactDetails", {
             method: "POST",
             body: JSON.stringify({ values }),
@@ -42,23 +42,34 @@ const Contact = () => {
                 throw new Error("Something went wrong");
             })
             .then((data) => {
-                toast.success(`${data.userName}, your data saved successfully`);
+                // setSubmitting False
+                actions.setSubmitting(false);
+                // Success Alert
+                toast.success(
+                    `Hello ${data.userName}, we will contact you as soon as possible.`
+                );
+                // Reset Form
+                actions.resetForm({
+                    values: "",
+                });
             })
             .catch((err) => {
-                if (err[DOMException] === "The user aborted a request") {
-                    toast.error("Time out exceeded!")
+                if (controller.signal.reason.name === "AbortError") {
+                    toast.error("Time out exceeded!");
                 } else {
                     toast.error(`${err}`);
-                    console.log(err);
-                    console.log(controller);
-
                 }
             });
     };
     return (
         <div>
             {/* Toast Container */}
-            <ToastContainer autoClose={3000} position="top-right" theme="light" />
+            <ToastContainer
+                autoClose={3000}
+                position="bottom-right"
+                theme="dark"
+                className="Toast-Container"
+            />
             {/* Contact Banner */}
             <Banner bannerBackground={contactBanner} />
             <div className="container">

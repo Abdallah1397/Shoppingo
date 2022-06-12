@@ -15,15 +15,20 @@ a {
   margin: 0;
   padding: 0;
 }
+/* Conatiner Div */
 .container {
   margin: 0 3rem;
 }
-/* .toastAlret{
-  position: absolute;
-} */
 /* Extra small devices (phones, 768px and down) */
 @media screen and (max-width: 768px) {
   .container {
     margin: 0 1rem;
   }
+}
+/* Toastify => Override Exisiting css classes */
+.Toastify__toast-body {
+  font-family: "Poppins",sans-serif !important;
+}
+.Toastify__progress-bar--success {
+  background: #666 !important;
 }
