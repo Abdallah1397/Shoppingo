@@ -11,7 +11,7 @@
 /* Customer card */
 .customerCard{
     margin: .5rem;
-    padding: 1.5rem;
+    padding: 3.5rem 1.8rem;
     border: 1px solid #dddada;
     display: flex;
     flex-direction: column;

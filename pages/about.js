@@ -2,8 +2,7 @@ import Banner from "../components/Banner/Banner";
 import Title from "../components/Title/Title";
 import AboutBanner1 from "../public/assets/banners/aboutBanner1.png";
 import styles from "../styles/aboutUs.module.css";
-import About1 from "../public/assets/about1.png";
-import about2 from "../public/assets/about2.png";
+import aboutInfo from "../public/assets/about-info.jpg";
 import Image from "next/image";
 import Customers from "../components/Customers/Customers";
 
@@ -16,7 +15,7 @@ const AboutUs = () => {
             <div className="container">
                 {/* About US Title */}
                 <Title title="About US" />
-                {/* Main Topic */}
+                {/* Main Informations */}
                 <div className={styles.aboutUSMainDiv}>
                     <div className={styles.aboutUsTopic}>
                         <h3 className={styles.mainTitle}>Who We Are ?</h3>
@@ -34,9 +33,10 @@ const AboutUs = () => {
                             are located.
                         </p>
                     </div>
+                    {/* Image Info */}
                     <div className={styles.aboutImage}>
                         <Image
-                            src={about2}
+                            src={aboutInfo}
                             alt="about2Image"
                             width="200"
                             height="200"
