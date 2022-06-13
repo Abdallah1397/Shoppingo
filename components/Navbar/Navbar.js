@@ -37,15 +37,7 @@ const Navbar = () => {
                         <Link href="/">Shop</Link>
                     </li>
                     <li>
-                        <LinkScroll
-                            to="about"
-                            smooth={true}
-                            offset={-95}
-                            duration={1000}
-                            spy={true}
-                        >
-                            About
-                        </LinkScroll>
+                        <Link href="/about">About Us </Link>
                     </li>
                     <li>
                         <Link href="/contact">Contact</Link>

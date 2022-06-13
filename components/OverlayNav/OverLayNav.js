@@ -24,29 +24,8 @@ const OverlayNav = () => {
                 <h3 onClick={closeNavigationBar}>
                     <Link href="/">Shop</Link>
                 </h3>
-                {/* <h3>
-                    <LinkScroll
-                        to="shop"
-                        smooth={true}
-                        offset={-75}
-                        duration={1000}
-                        spy={true}
-                        onClick={closeNavigationBar}
-                    >
-                        Shop
-                    </LinkScroll>
-                </h3> */}
-                <h3>
-                    <LinkScroll
-                        to="about"
-                        smooth={true}
-                        offset={-90}
-                        duration={1000}
-                        spy={true}
-                        onClick={closeNavigationBar}
-                    >
-                        About
-                    </LinkScroll>
+                <h3 onClick={closeNavigationBar}>
+                    <Link href="/about">About us</Link>
                 </h3>
                 <div>
                     <h3 onClick={closeNavigationBar}>
