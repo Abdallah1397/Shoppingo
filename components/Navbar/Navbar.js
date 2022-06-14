@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
-import { Link as LinkScroll } from "react-scroll";
 import Link from "next/link";
 import { GrCart, GrMenu } from 'react-icons/gr'
-import { toggleCart } from "../../redux/actions/cartStatus";
+import { toggleCart, closeCart } from "../../redux/actions/cartStatus";
+import { closeOverlayNavbar, toggleOverlayNavbar } from '../../redux/actions/overlayNavbar';
 import styles from "./Navbar.module.css";
 import OverlayNav from "../OverlayNav/OverLayNav";
 import Cart from "../Cart/Cart";
@@ -10,15 +10,18 @@ import Cart from "../Cart/Cart";
 // NavbarComponent
 const Navbar = () => {
     const dispatch = useDispatch();
+
     // number of items in cart
     const qty = useSelector(state => state.cart.totalQty);
     // toggleFunction
-    const openNavigationBar = () => {
-        document.getElementById("myNav").style.width = "100%";
+    const toggleOverlayNavFunction = () => {
+        dispatch(toggleOverlayNavbar());
+        dispatch(closeCart());
     };
     // toggleCartFunction
     const toggleCartFunction = () => {
         dispatch(toggleCart());
+        dispatch(closeOverlayNavbar());
     }
 
     return (
@@ -50,11 +53,11 @@ const Navbar = () => {
                         <span className={styles.spanNumber}>{qty}</span>
                     </li>
                     <li className={styles.icon}>
-                        <GrMenu onClick={openNavigationBar} />
+                        <GrMenu onClick={toggleOverlayNavFunction} />
                     </li>
                 </ul>
-                <OverlayNav />
             </nav>
+            <OverlayNav />
             <Cart />
         </>
     );

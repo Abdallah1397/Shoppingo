@@ -3,8 +3,8 @@
     height: 100%;
     width: 0%;
     overflow: hidden;
-    z-index: 1;
-    top: 0;
+    z-index: 111;
+    top: 4.7rem;
     left: 0;
     transition: 1s;
     position: fixed;
@@ -12,35 +12,27 @@
     display: flex;
     flex-direction: column;
 }
-
-/* closeIcon */
-.closeIcon{
-    font-size: 2.5rem;
-    padding: 1rem;
-    text-align: end;
-    cursor: pointer;
+.showNavigation{
+    width: 100%;
+}
+.itemsWrapper{
+    padding: 3rem 0;
 }
 
-.items{
-    padding: 6rem 0;
-    font-size: 1.5rem;
-    font-weight: 600;
+.item{
+    font-size: 1.3rem;
+    font-weight: 500;
     text-transform: uppercase;
-    line-height: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.items h3{
-    width: fit-content;
+    padding-top: 1.5rem;
+    text-align: center;
 }
 
 .logo{
     font-family: 'Lobster', cursive;
     font-size: x-large;
-    display: flex;
     flex-grow: 1;
+    display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: end;
+    padding-bottom: 7rem;
 }

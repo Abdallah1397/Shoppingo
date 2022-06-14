@@ -1,4 +1,4 @@
-import { TOGGLE_CART } from "../types/cartStatus";
+import { TOGGLE_CART, CLOSE_CART } from "../types/cartStatus";
 
 const INITIAL_STATE = {
     cartStatus: false,
@@ -11,10 +11,12 @@ const cartStatusReducer = (state = INITIAL_STATE, actions) => {
             return {
                 cartStatus: !state.cartStatus,
             }
-        default:
+        case CLOSE_CART:
             return {
-                ...state,
+                cartStatus: false,
             }
+        default:
+            return state;
     }
 }
 export default cartStatusReducer;

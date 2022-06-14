@@ -1,0 +1,3 @@
+// Action Type Declration
+export const CLOSE_OVERLAY_NAVBAR = "CLOSE_OVERLAY_NAVBAR";
+export const TOGGLE_OVERLAY_NAVBAR = "TOGGLE_OVERLAY_NAVBAR";
