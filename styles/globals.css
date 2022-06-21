@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Poppins", sans-serif ;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -15,20 +15,30 @@ a {
   margin: 0;
   padding: 0;
 }
+/* Toastify => Override Exisiting css classes */
+.Toastify__toast-body {
+  font-family: "Poppins", sans-serif !important;
+}
+.Toastify__progress-bar--success {
+  background: #666 !important;
+}
+/* Colored Div */
+.coloredDiv {
+  background-color: #f6f7f9;
+}
 /* Conatiner Div */
 .container {
-  margin: 0 3rem;
+  margin: 0 5rem;
+}
+.products {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 /* Extra small devices (phones, 768px and down) */
 @media screen and (max-width: 768px) {
   .container {
     margin: 0 1rem;
   }
-}
-/* Toastify => Override Exisiting css classes */
-.Toastify__toast-body {
-  font-family: "Poppins",sans-serif !important;
-}
-.Toastify__progress-bar--success {
-  background: #666 !important;
 }

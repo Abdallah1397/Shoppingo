@@ -12,6 +12,12 @@
   justify-content: end;
   align-items: center;
 }
+.ourCategories{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 3rem;
+}
 .title{
   float: right;
   margin-right: 40px;

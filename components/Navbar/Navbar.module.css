@@ -11,11 +11,10 @@
   background: #fff;
   border-bottom: 1px solid #eaeaea;
   overflow: hidden;
-  padding: 1rem 3rem;
+  padding: 1rem 5rem;
 }
 /* Logo */
 .logo {
-  padding-left: 1rem;
   flex-grow: 3;
 }
 
@@ -47,11 +46,10 @@
   list-style: none;
   align-items: center;
   width: max-content;
-  padding: 0 1rem;
 }
 .icon {
   font-size: 1.4rem;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
 }
 .icon:nth-child(1) {
   position: relative;
@@ -77,8 +75,12 @@
 }
 /* Extra small devices (phones, 768px and down) */
 @media screen and (max-width: 768px) {
-  .navbar{
+  .navbar {
     padding: 1.2rem 0;
+  }
+  /* Logo */
+  .logo {
+    padding-left: 1rem;
   }
   .navbar_items {
     display: none;

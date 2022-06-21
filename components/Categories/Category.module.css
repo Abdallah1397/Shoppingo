@@ -1,0 +1,45 @@
+/* Categort Wrapper = Main Div */
+.categoryWrapper {
+  width: 30%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+/* Title Wrapper */
+.categoryTitleWrapper {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  width: 94%;
+  bottom: -10%;
+  left: 3%;
+  padding: 0.8rem;
+  border-radius: 3px;
+  opacity: 0;
+  transition: all 1s linear;
+}
+.categoryWrapper:hover .categoryTitleWrapper {
+  opacity: 1;
+  transition: all 0.3s linear;
+  bottom: 3%;
+}
+/* Category Title */
+.categoryTitle {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #fff;
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .categoryWrapper {
+        width: 46%;
+        margin-top: 2rem;
+
+      }
+}
+/* Extra small devices (phones, 768px and down) */
+@media screen and (max-width: 768px) {
+    .categoryWrapper {
+        width: 96%;
+        margin-top: 2rem;
+      }}
