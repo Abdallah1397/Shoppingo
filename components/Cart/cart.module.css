@@ -61,14 +61,15 @@
 .cartItem{
   display: flex;
   align-items: center;
+  justify-content: space-between;
   text-align: start;
-  margin-left: -1rem;
   padding-right: 1.3rem;
 }
 .cartItemDetails{
   text-transform: capitalize;
   flex-grow: 1;
   padding-top:1rem ;
+  margin-left: 1rem;
 }
 .deleteItem{
   cursor: pointer;

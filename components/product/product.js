@@ -9,7 +9,7 @@ const Product = (props) => {
     return (
         <div className={styles.product}>
             {/*Product Image  */}
-            <Link href={`/${props.id}`} passHref>
+            <Link href={props.href} passHref>
                 <a>
                     <Image
                         src={props.src}

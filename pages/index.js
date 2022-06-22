@@ -18,9 +18,9 @@ export default function Home() {
           <Title title="Browse our categories" />
           {/* Our Categories */}
           <div className={styles.ourCategories}>
-            <Category src={Shirt} title="Shirts" href="/about" />
-            <Category src={ToteBags} title="Tote Bags" href="/tote-bags" />
+            <Category src={Shirt} title="Shirts" href="/shirts" />
             <Category src={HeadPhone} title="Headphones" href="/bags" />
+            <Category src={ToteBags} title="Tote Bags" href="/tote-bags" />
           </div>
         </div>
       </div>
