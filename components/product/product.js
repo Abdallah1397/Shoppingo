@@ -18,6 +18,7 @@ const Product = (props) => {
                         height="10"
                         alt={props.title}
                         className={styles.productImage}
+                        quality={100}
                     />
                 </a>
             </Link>

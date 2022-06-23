@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addOneProduct } from '../../redux/actions/cart'
 import Product from "../../components/product/product";
 import Title from "../../components/Title/Title";
@@ -7,6 +7,9 @@ import Title from "../../components/Title/Title";
 const Bags = ({ bags }) => {
     // Dispatch Declaration
     const dispatch = useDispatch();
+    // test
+    const cartState = useSelector((state) => state.cart.cart);
+    console.log(cartState);
     return (
         <div>
             <div className="container">

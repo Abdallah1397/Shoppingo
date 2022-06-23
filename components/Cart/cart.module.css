@@ -64,6 +64,7 @@
   justify-content: space-between;
   text-align: start;
   padding-right: 1.3rem;
+  margin-bottom: 1rem;
 }
 .cartItemDetails{
   text-transform: capitalize;

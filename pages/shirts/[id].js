@@ -1,14 +1,17 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { addProduct } from "../../redux/actions/cart";
 import ProductDetails from "../../components/ProductDetails/ProductDetails";
 
 // Single Shirt Page
 const SingleShirt = ({ shirt }) => {
+    // Dispatch Declaration
+    const dispatch = useDispatch();
     // qty state
     const [qtyState, setQtyState] = useState(1);
     // handle qty change
     const handleQtyChange = (e) => {
-        setQtyState(e.target.value);
+        setQtyState(parseInt(e.target.value));
     };
     return (
         <div className="container">
