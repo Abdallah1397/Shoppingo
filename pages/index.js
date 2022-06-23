@@ -19,7 +19,7 @@ export default function Home() {
           {/* Our Categories */}
           <div className={styles.ourCategories}>
             <Category src={Shirt} title="Shirts" href="/shirts" />
-            <Category src={HeadPhone} title="Headphones" href="/bags" />
+            <Category src={HeadPhone} title="Headphones" href="/headphones" />
             <Category src={ToteBags} title="Tote Bags" href="/tote-bags" />
           </div>
         </div>

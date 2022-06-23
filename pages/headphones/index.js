@@ -1,7 +1,10 @@
 import { useDispatch } from "react-redux";
-import { addOneProduct } from '../../redux/actions/cart'
+import { addOneProduct } from '../../redux/actions/cart';
+import Banner from '../../components/Banner/Banner';
 import Title from "../../components/Title/Title";
 import Product from "../../components/product/product";
+import HeadphoneBanner from '../../public/assets/banners/headphonesBanner.jpeg';
+
 
 // Headphones Page
 const Headphones = (props) => {
@@ -9,6 +12,8 @@ const Headphones = (props) => {
     const dispatch = useDispatch();
     return (
         <div>
+            {/* Main Banner */}
+            <Banner bannerBackground={HeadphoneBanner} />
             <div className="container">
                 <Title title="Headphones Products" />
                 {/* Headphones products */}

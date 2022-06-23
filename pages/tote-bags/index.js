@@ -2,6 +2,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { addOneProduct } from '../../redux/actions/cart'
 import Product from "../../components/product/product";
 import Title from "../../components/Title/Title";
+import Banner from '../../components/Banner/Banner';
+import ToteBags from '../../public/assets/banners/toteBags.png';
+
+
+
 
 // Tote Bags Page
 const Bags = ({ bags }) => {
@@ -12,6 +17,7 @@ const Bags = ({ bags }) => {
     console.log(cartState);
     return (
         <div>
+            <Banner bannerBackground={ToteBags} />
             <div className="container">
                 <Title title="Tote bags" />
                 <div className="products">

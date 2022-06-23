@@ -2,6 +2,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addOneProduct } from '../../redux/actions/cart';
 import Product from "../../components/product/product";
 import Title from "../../components/Title/Title";
+import Banner from '../../components/Banner/Banner';
+import ShirtsBanner from '../../public/assets/banners/shirts1.png';
+
 
 
 // Shirts Products Page
@@ -13,6 +16,7 @@ const Shirts = ({ shirts }) => {
     console.log(cartState);
     return (
         <div>
+            <Banner bannerBackground={ShirtsBanner} />
             <div className="container">
                 {/* Page Title */}
                 <Title title="Shirts Products" />

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addProduct } from '../../redux/actions/cart';
+import { addProduct } from "../../redux/actions/cart";
 import ProductDetails from "../../components/ProductDetails/ProductDetails";
 
 // Single Headphone Page
@@ -11,8 +11,8 @@ const SingleHeadphone = (props) => {
     const [qtyState, setQtyState] = useState(1);
     // handleQtyChange
     const handleQtyChange = (e) => {
-        setQtyState(parseInt(e.target.value))
-    }
+        setQtyState(parseInt(e.target.value));
+    };
     return (
         <div className="container">
             <ProductDetails
