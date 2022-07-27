@@ -106,7 +106,7 @@ const Contact = () => {
                     <div className={styles.formWrapper}>
                         {/* Let's Connect title and its subtitle */}
                         <div className={styles.connectWrapper}>
-                            <h4 className={styles.connectWrapper_title}>Let's Connect </h4>
+                            <h4 className={styles.connectWrapper_title}>Connect now </h4>
                             <p className={styles.connectWrapper_subTitle}>
                                 Your email addres will not be published. Required fields are
                                 marked *

@@ -5,6 +5,7 @@ export const shirts = [
         image: "/assets/shirts/shirt1.jpg",
         price: 30.00,
         rate: 3.5,
+        href:"shirts",
         desc: "A T-shirt, or tee, is a style of fabric shirt named after the T shape of its body and sleeves. Traditionally, it has short sleeves and a round neckline, known as a crew neck, which lacks a collar. T-shirts are generally made of a stretchy, light, and inexpensive fabric and are easy to clean.",
     },
     {
@@ -13,6 +14,7 @@ export const shirts = [
         image: "/assets/shirts/shirt2.jpg",
         price: 30.00,
         rate: 3.5,
+        href:"shirts",
         desc: "A T-shirt, or tee, is a style of fabric shirt named after the T shape of its body and sleeves. Traditionally, it has short sleeves and a round neckline, known as a crew neck, which lacks a collar. T-shirts are generally made of a stretchy, light, and inexpensive fabric and are easy to clean.",
     },
     {
@@ -21,6 +23,8 @@ export const shirts = [
         image: "/assets/shirts/shirt3.jpg",
         price: 30.00,
         rate: 4.5,
+        featured:true,
+        href:"shirts",
         desc: "A T-shirt, or tee, is a style of fabric shirt named after the T shape of its body and sleeves. Traditionally, it has short sleeves and a round neckline, known as a crew neck, which lacks a collar. T-shirts are generally made of a stretchy, light, and inexpensive fabric and are easy to clean.",
     },
     {
@@ -29,6 +33,8 @@ export const shirts = [
         image: "/assets/shirts/shirt4.jpg",
         price: 30.00,
         rate: 4,
+        bestSales:true,
+        href:"shirts",
         desc: "A T-shirt, or tee, is a style of fabric shirt named after the T shape of its body and sleeves. Traditionally, it has short sleeves and a round neckline, known as a crew neck, which lacks a collar. T-shirts are generally made of a stretchy, light, and inexpensive fabric and are easy to clean.",
     },
     {
@@ -37,6 +43,7 @@ export const shirts = [
         image: "/assets/shirts/shirt5.jpg",
         price: 30.00,
         rate: 5,
+        href:"shirts",
         desc: "A T-shirt, or tee, is a style of fabric shirt named after the T shape of its body and sleeves. Traditionally, it has short sleeves and a round neckline, known as a crew neck, which lacks a collar. T-shirts are generally made of a stretchy, light, and inexpensive fabric and are easy to clean.",
     },
     {
@@ -45,6 +52,7 @@ export const shirts = [
         image: "/assets/shirts/shirt6.jpg",
         price: 30.00,
         rate: 3,
+        href:"shirts",
         desc: "A T-shirt, or tee, is a style of fabric shirt named after the T shape of its body and sleeves. Traditionally, it has short sleeves and a round neckline, known as a crew neck, which lacks a collar. T-shirts are generally made of a stretchy, light, and inexpensive fabric and are easy to clean.",
     },
 ];

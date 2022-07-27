@@ -4,16 +4,14 @@ import Product from "../../components/product/product";
 import Title from "../../components/Title/Title";
 import Banner from '../../components/Banner/Banner';
 import ShirtsBanner from '../../public/assets/banners/shirts1.png';
-
+import Hero from '../../components/Hero/Hero';
 
 
 // Shirts Products Page
 const Shirts = ({ shirts }) => {
     // Dispatch Declaration
     const dispatch = useDispatch();
-    // test
-    const cartState = useSelector((state) => state.cart.cart);
-    console.log(cartState);
+    
     return (
         <div>
             <Banner bannerBackground={ShirtsBanner} />
@@ -27,13 +25,14 @@ const Shirts = ({ shirts }) => {
                             key={index}
                             title={item.title}
                             src={item.image}
-                            href={`/shirts/${item.id}`}
+                            href={`${item.href}/${item.id}`}
                             price={item.price}
                             rate={item.rate}
                             onClick={() => dispatch(addOneProduct(item))}
                         />
                     ))}
                 </div>
+                <Hero />
             </div>
 
         </div>

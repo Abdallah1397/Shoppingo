@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addOneProduct } from '../../redux/actions/cart'
+import { addOneProduct } from '../../redux/actions/cart';
 import Product from "../../components/product/product";
 import Title from "../../components/Title/Title";
 import Banner from '../../components/Banner/Banner';
 import ToteBags from '../../public/assets/banners/toteBags.png';
-
+import Hero from "../../components/Hero/Hero";
 
 
 
@@ -12,9 +12,7 @@ import ToteBags from '../../public/assets/banners/toteBags.png';
 const Bags = ({ bags }) => {
     // Dispatch Declaration
     const dispatch = useDispatch();
-    // test
-    const cartState = useSelector((state) => state.cart.cart);
-    console.log(cartState);
+
     return (
         <div>
             <Banner bannerBackground={ToteBags} />
@@ -26,7 +24,7 @@ const Bags = ({ bags }) => {
                             key={index}
                             title={item.title}
                             src={item.image}
-                            href={`/tote-bags/${item.id}`}
+                            href={`/${item.href}/${item.id}`}
                             price={item.price}
                             rate={item.rate}
                             onClick={() => dispatch(addOneProduct(item))}
@@ -34,6 +32,7 @@ const Bags = ({ bags }) => {
                     ))}
                 </div>
             </div>
+            <Hero />
         </div>
     )
 }

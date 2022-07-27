@@ -4,7 +4,7 @@ import Banner from '../../components/Banner/Banner';
 import Title from "../../components/Title/Title";
 import Product from "../../components/product/product";
 import HeadphoneBanner from '../../public/assets/banners/headphonesBanner.jpeg';
-
+import Hero from "../../components/Hero/Hero";
 
 // Headphones Page
 const Headphones = (props) => {
@@ -22,7 +22,7 @@ const Headphones = (props) => {
                         <Product
                             key={index}
                             title={item.title}
-                            href={`headphones/${item.id}`}
+                            href={`${item.href}/${item.id}`}
                             src={item.image}
                             rate={item.rate}
                             price={item.price}
@@ -31,6 +31,7 @@ const Headphones = (props) => {
                     ))}
                 </div>
             </div>
+            <Hero />
         </div>
     );
 };

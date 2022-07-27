@@ -31,6 +31,9 @@ const OverlayNav = () => {
                         <Link href="/">Shop</Link>
                     </h3>
                     <h3 onClick={closeNavigationBar} className={styles.item}>
+                        <Link href="/allProducts">Products</Link>
+                    </h3>
+                    <h3 onClick={closeNavigationBar} className={styles.item}>
                         <Link href="/about">About us</Link>
                     </h3>
                     <h3 onClick={closeNavigationBar} className={styles.item}>
